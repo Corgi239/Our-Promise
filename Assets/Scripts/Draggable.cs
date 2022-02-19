@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragAndDrop : MonoBehaviour
+public class Draggable : MonoBehaviour
 {
     private Camera _mainCamera;
     private bool _isDragging;
@@ -15,13 +15,13 @@ public class DragAndDrop : MonoBehaviour
         _mainCamera = Camera.main;
     }
 
-    public void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         _isDragging = true;
         _grabPoint = _mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
     }
 
-    public void OnMouseUp()
+    public virtual void OnMouseUp()
     {
         _isDragging = false;
     }
