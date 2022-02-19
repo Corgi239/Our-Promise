@@ -26,7 +26,7 @@ public class DragAndDrop : MonoBehaviour
         _isDragging = false;
     }
 
-    public void Update()
+    public void OnMouseDrag()
     {
         if (_isDragging)
         {
