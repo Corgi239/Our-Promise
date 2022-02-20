@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Gem : Draggable
 {
@@ -10,9 +12,12 @@ public class Gem : Draggable
 
     public delegate void DragEndedCallback(Gem gem);
     public DragEndedCallback dragEndedCallback;
+    public delegate void DragStartedCallback(Gem gem);
+    public DragEndedCallback dragStartedCallback;
 
     private Renderer _renderer;
     private static Dictionary<GemType, Color> _colors;
+    [CanBeNull] public GemSlot currentSlot;
 
     public override void Awake()
     {
@@ -34,14 +39,17 @@ public class Gem : Draggable
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        transform.parent = null;
-        Vector3 currentPosition = transform.position;
-        transform.position = new Vector3(currentPosition.x, currentPosition.y, 0);
+        dragStartedCallback(this);
     }
     public override void OnMouseUp()
     {
         base.OnMouseUp();
         dragEndedCallback(this);
+    }
+
+    public override string ToString()
+    {
+        return $"{size} {type}";
     }
 }
 
