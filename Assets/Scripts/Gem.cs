@@ -35,6 +35,8 @@ public class Gem : Draggable
     {
         base.OnMouseDown();
         transform.parent = null;
+        Vector3 currentPosition = transform.position;
+        transform.position = new Vector3(currentPosition.x, currentPosition.y, 0);
     }
     public override void OnMouseUp()
     {

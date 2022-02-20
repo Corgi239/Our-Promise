@@ -41,7 +41,7 @@ public class GemSlotSnapController : MonoBehaviour
         if (closestSlot != null && closestDistance <= snapRange) {
             Transform gemTransform = gem.transform;
             gemTransform.parent = closestSlot.transform;
-            gemTransform.localPosition = Vector2.zero;
+            gemTransform.localPosition = new Vector3(0, 0, -1);
         }
     }
 }
