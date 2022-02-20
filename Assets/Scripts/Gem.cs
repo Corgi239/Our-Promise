@@ -43,5 +43,5 @@ public class Gem : Draggable
     }
 }
 
-public enum GemSize {Small, Medium, Large};
+public enum GemSize {Small, Medium, Large}
 public enum GemType {Emerald, Ruby}
