@@ -10,7 +10,7 @@ public class Draggable : MonoBehaviour
     private Vector3 _grabPoint;
 
 
-    public void Awake()
+    public virtual void Awake()
     {
         _mainCamera = Camera.main;
     }
@@ -26,7 +26,7 @@ public class Draggable : MonoBehaviour
         _isDragging = false;
     }
 
-    public void OnMouseDrag()
+    public virtual void OnMouseDrag()
     {
         if (_isDragging)
         {
