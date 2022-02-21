@@ -26,7 +26,8 @@ public class Gem : Draggable
         _colors = new Dictionary<GemType, Color>
         {
             {GemType.Emerald, new Color32(137, 246, 143, 255)},
-            {GemType.Ruby, new Color32(155,17,30, 255)}
+            {GemType.Ruby, new Color32(195,50,80, 255)},
+            {GemType.Saphire, new Color32(90, 90, 220, 255)}
         };
     }
 
@@ -54,4 +55,4 @@ public class Gem : Draggable
 }
 
 public enum GemSize {Small, Medium, Large}
-public enum GemType {Emerald, Ruby}
+public enum GemType {Emerald, Ruby, Saphire}
