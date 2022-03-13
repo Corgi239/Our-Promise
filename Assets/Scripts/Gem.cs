@@ -52,6 +52,12 @@ public class Gem : Draggable
     {
         return $"{size} {type}";
     }
+
+    public string EffectDescription()
+    {
+        //TODO: Add actual effect descriptions
+        return $"effect of {type}";
+    }
 }
 
 public enum GemSize {Small, Medium, Large}
