@@ -399,16 +399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ac7c9f9371642c6be8b54ffb360ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemData: {fileID: 11400000, guid: 77c343a21d54c4050921b53d6792a68c, type: 2}
   slots:
   - {fileID: 331839401}
   - {fileID: 2091525675}
   - {fileID: 536224851}
   material: 0
-  resonantPairs:
-  - slot1: {fileID: 331839401}
-    slot2: {fileID: 2091525675}
-  - slot1: {fileID: 331839401}
-    slot2: {fileID: 536224851}
+  resonantPairs: []
 --- !u!114 &331839401 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 343728841650015322, guid: 79ddbb38eb7a24c9aba5501ee76ef57e, type: 3}
@@ -947,22 +944,6 @@ PrefabInstance:
     - target: {fileID: 3849848606670939995, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3849848606670939996, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3849848606670939996, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3849848606670939996, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3849848606670939996, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3849848606670939998, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
       propertyPath: m_Name
