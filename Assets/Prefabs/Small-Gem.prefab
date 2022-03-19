@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f97509087a94acca6f6c30675675e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemData: {fileID: 11400000, guid: 77c343a21d54c4050921b53d6792a68c, type: 2}
+  gemData: {fileID: 11400000, guid: 63760222cc8fa4ff386282abd478c86b, type: 2}
   size: 0
   type: 0
   currentSlot: {fileID: 0}
