@@ -6,9 +6,23 @@ using UnityEngine;
 
 public class Artifact : MonoBehaviour
 {
+    [SerializeField] protected GemData gemData;
     [SerializeField] private GemSlot[] slots;
     [SerializeField] private ArtifactMaterial material;
     [SerializeField] private ResonantPair[] resonantPairs;
+
+    public void Awake()
+    {
+        int l = slots.Length;
+        List<ResonantPair> pairs = new List<ResonantPair>();
+        for (int i = 0; i < l-1; i++) {
+            for (int j = i + 1; j < l; j++) {
+                pairs.Add(new ResonantPair(slots[i], slots[j]));
+            }
+        }
+        pairs.First().SetGemData(this.gemData);
+        this.resonantPairs = pairs.ToArray();
+    }
 
     private Gem[] Gems()
     {
@@ -38,7 +52,7 @@ public class Artifact : MonoBehaviour
         }
         string effectsSummary = "Effects\n";
         Gem largestGem = LargestGem();
-        string mainEffect = largestGem != null ? largestGem.EffectDescription() + $" ({largestGem.size})\n" : "Empty\n";
+        string mainEffect = largestGem != null ? largestGem.EffectDescription(this.material) + $" ({largestGem.size})\n" : "Empty\n";
         effectsSummary += "├ Main effect: " + mainEffect;
         string[] sideeffects = resonantPairs.Select(p => p.ToString()).ToArray();
         for (int i = 0; i < sideeffects.Length; i++) {
@@ -61,23 +75,27 @@ public class ResonantPair
 {
     [SerializeField] private GemSlot slot1;
     [SerializeField] private GemSlot slot2;
+    private static GemData _gemData;
     
     public ResonantPair(GemSlot firstSlot, GemSlot secondSlot)
     {
         this.slot1 = firstSlot;
         this.slot2 = secondSlot;
     }
-    
+
+    public void SetGemData(GemData gemData) { _gemData = gemData; }
+
     public bool IsInResonance()
     {
         //TODO: Implement once we have figured out gem cuts
-        return slot1.IsOccupied() && slot2.IsOccupied();
+        return slot1.IsOccupied() && slot2.IsOccupied() && (slot1.occupant.type != slot2.occupant.type);
     }
 
     public override string ToString()
     {
         if (IsInResonance()) {
-            return $"{slot1} and {slot2} in resonance";
+            var set = new HashSet<GemType> {slot1.occupant.type, slot2.occupant.type};
+            return _gemData.Virtue[set];
         } else {
             return $"{slot1} and {slot2} out of resonance";
         }

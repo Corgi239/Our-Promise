@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 
 public class Gem : Draggable
 {
+    [SerializeField] private GemData gemData;
     public GemSize size;
     public GemType type;
 
@@ -16,25 +17,17 @@ public class Gem : Draggable
     public DragEndedCallback dragStartedCallback;
 
     private Renderer _renderer;
-    private static Dictionary<GemType, Color> _colors;
     [CanBeNull] public GemSlot currentSlot;
 
     public override void Awake()
     {
         base.Awake();
         _renderer = GetComponent<Renderer>();
-        _colors = new Dictionary<GemType, Color>
-        {
-            {GemType.Emerald, new Color32(137, 246, 143, 255)},
-            {GemType.Ruby, new Color32(195,50,80, 255)},
-            {GemType.Saphire, new Color32(90, 90, 220, 255)}
-        };
     }
 
     public void Start()
     {
-        Color color = _colors[type];
-        _renderer.material.color = color;
+        _renderer.material.color = gemData.Color[this.type];
     }
 
     public override void OnMouseDown()
@@ -53,12 +46,23 @@ public class Gem : Draggable
         return $"{size} {type}";
     }
 
-    public string EffectDescription()
+    public string EffectDescription(ArtifactMaterial material)
     {
-        //TODO: Add actual effect descriptions
-        return $"effect of {type}";
+        string effect = "Unknown material";
+        switch (material) {
+            case ArtifactMaterial.Iron:
+                effect = gemData.BodyEffect[type];
+                break;
+            case ArtifactMaterial.Wood:
+                effect =  gemData.ReflexEffect[type];
+                break;
+            case ArtifactMaterial.Bone:
+                effect = gemData.MindEffect[type];
+                break;
+        }
+        return effect;
     }
 }
 
 public enum GemSize {Small, Medium, Large}
-public enum GemType {Emerald, Ruby, Saphire}
+public enum GemType {Emerald, Ruby, Sapphire}
