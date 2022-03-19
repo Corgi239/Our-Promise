@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ac7c9f9371642c6be8b54ffb360ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemData: {fileID: 11400000, guid: 77c343a21d54c4050921b53d6792a68c, type: 2}
+  gemData: {fileID: 11400000, guid: 63760222cc8fa4ff386282abd478c86b, type: 2}
   slots:
   - {fileID: 331839401}
   - {fileID: 2091525675}
