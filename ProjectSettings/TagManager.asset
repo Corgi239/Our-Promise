@@ -47,6 +47,9 @@ TagManager:
   - name: Artifacts
     uniqueID: 426327795
     locked: 0
+  - name: ResonanceLines
+    uniqueID: 1028999039
+    locked: 0
   - name: Gemstones
     uniqueID: 3659601715
     locked: 0
