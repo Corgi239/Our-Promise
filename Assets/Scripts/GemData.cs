@@ -6,12 +6,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Gem Data", menuName = "ScriptableObjects/Gem Data", order = 1)]
 public class GemData : ScriptableObject
 {
-    [Tooltip("Information about gems")] [SerializeField]
-    private GemRecord[] gemDetails;
+    [SerializeField] private GemRecord[] gemDetails;
+    [SerializeField]
+    private GemAppearanceData appearanceData;
     [Tooltip("Information about effects of gem resonance of form (Type 1, Type 2, Virtue effect description, Vice effect description)")] [SerializeField]
     private ResonanceEffectRecord[] resonanceEffects;
 
-    public Dictionary<GemType, Color> Color;
+    public Dictionary<(GemType, GemSize, GemCut), Sprite> Sprite;
     public Dictionary<GemType, string> BodyEffect;
     public Dictionary<GemType, string> ReflexEffect;
     public Dictionary<GemType, string> MindEffect;
@@ -20,12 +21,11 @@ public class GemData : ScriptableObject
 
     public void OnEnable()
     {
-        Color = new Dictionary<GemType, Color>();
+        Sprite = appearanceData.Sprite;
         BodyEffect = new Dictionary<GemType, string>();
         ReflexEffect = new Dictionary<GemType, string>();
         MindEffect = new Dictionary<GemType, string>();
         foreach (GemRecord record in gemDetails) {
-            Color[record.type] = record.color;
             BodyEffect[record.type] = record.bodyEffect;
             ReflexEffect[record.type] = record.reflexEffect;
             MindEffect[record.type] = record.mindEffect;
@@ -49,7 +49,6 @@ public class GemData : ScriptableObject
 public class GemRecord
 {
     public GemType type;
-    public Color color;
     public string bodyEffect;
     public string reflexEffect;
     public string mindEffect;

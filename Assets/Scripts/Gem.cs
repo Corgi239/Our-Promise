@@ -10,24 +10,25 @@ public class Gem : Draggable
     [SerializeField] private GemData gemData;
     public GemSize size;
     public GemType type;
+    public GemCut cut;
 
     public delegate void DragEndedCallback(Gem gem);
     public DragEndedCallback dragEndedCallback;
     public delegate void DragStartedCallback(Gem gem);
     public DragEndedCallback dragStartedCallback;
 
-    private Renderer _renderer;
+    private SpriteRenderer _renderer;
     [CanBeNull] public GemSlot currentSlot;
 
     public override void Awake()
     {
         base.Awake();
-        _renderer = GetComponent<Renderer>();
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
     public void Start()
     {
-        _renderer.material.color = gemData.Color[this.type];
+        _renderer.sprite = gemData.Sprite[(type, size, cut)];
     }
 
     public override void OnMouseDown()
@@ -65,4 +66,5 @@ public class Gem : Draggable
 }
 
 public enum GemSize {Small, Medium, Large}
-public enum GemType {Emerald, Ruby, Sapphire}
+public enum GemType {Blue, Green, Purple, Red, Yellow}
+public enum GemCut {Cushion, Oval, Trilliant}

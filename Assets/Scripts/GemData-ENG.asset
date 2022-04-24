@@ -14,24 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemDetails:
   - type: 0
-    color: {r: 0.22459061, g: 0.9716981, b: 0.32854965, a: 1}
     bodyEffect: Endurance
     reflexEffect: Skill
     mindEffect: Tranquility
     codexEntry: The Wisdom of the earth manifests in endurance and tranquility.
   - type: 1
-    color: {r: 0.5377358, g: 0.027901389, b: 0.07928008, a: 1}
     bodyEffect: Strength
     reflexEffect: Quick reflexes
     mindEffect: Bravery
     codexEntry: The roaring flame made manifest, imarts strength and bravery.
   - type: 2
-    color: {r: 0.08530616, g: 0.2077741, b: 0.6698113, a: 1}
     bodyEffect: Regeneration
     reflexEffect: Flexibility
     mindEffect: Emphaty
     codexEntry: Imparts the qualities of pure water, granting physical and mental
       fluidity.
+  appearanceData: {fileID: 11400000, guid: 3e02a55c1b11a402b8c1fd4fd842d253, type: 2}
   resonanceEffects:
   - firstType: 0
     secondType: 1
