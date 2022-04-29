@@ -88,8 +88,9 @@ public class ResonantPair
 
     public bool IsInResonance()
     {
-        //TODO: Implement once we have figured out gem cuts
-        return slot1.IsOccupied() && slot2.IsOccupied() && (slot1.occupant.type != slot2.occupant.type);
+        return slot1.IsOccupied() && slot2.IsOccupied() && 
+               (slot1.occupant.type != slot2.occupant.type) && 
+               (slot1.occupant.cut == slot2.occupant.cut);
     }
 
     public override string ToString()
@@ -98,7 +99,7 @@ public class ResonantPair
             var set = new HashSet<GemType> {slot1.occupant.type, slot2.occupant.type};
             return _gemData.Virtue[set];
         } else {
-            return $"{slot1} and {slot2} out of resonance";
+            return $"[{slot1}] and [{slot2}] out of resonance";
         }
     }
 }

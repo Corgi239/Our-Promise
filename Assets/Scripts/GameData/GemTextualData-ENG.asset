@@ -13,29 +13,69 @@ MonoBehaviour:
   m_Name: GemTextualData-ENG
   m_EditorClassIdentifier: 
   gemTextualRecords:
-  - type: 0
+  - type: 3
     bodyEffect: Strength
     reflexEffect: Quick reactions
     mindEffect: Bravery
-    codexEntry: These stone burst with fiery energy
+    codexEntry: An everbursting flame is contained within the edges of this stone
   - type: 1
     bodyEffect: Endurance
     reflexEffect: Skill
     mindEffect: Serenity
     codexEntry: Wisdom of the earth itself is madnifested within these stones
   - type: 2
-    bodyEffect: 
-    reflexEffect: 
-    mindEffect: 
-    codexEntry: 
-  - type: 3
-    bodyEffect: 
-    reflexEffect: 
-    mindEffect: 
-    codexEntry: 
+    bodyEffect: Long life
+    reflexEffect: Perceptiveness
+    mindEffect: Rationality
+    codexEntry: Within this stone hides a spark that drives away the darkness
+  - type: 0
+    bodyEffect: Regeneration
+    reflexEffect: Flexibility
+    mindEffect: Empathy
+    codexEntry: A winding river, trapped in a shimmering stone
   - type: 4
-    bodyEffect: 
-    reflexEffect: 
-    mindEffect: 
-    codexEntry: 
-  resonanceTextualRecords: []
+    bodyEffect: Youthful appearance
+    reflexEffect: Deterity
+    mindEffect: Charisma
+    codexEntry: This stone inhabits a playful and restless gust of wind
+  resonanceTextualRecords:
+  - firstType: 0
+    secondType: 3
+    virtue: Sincerity
+    vice: Duplicity
+  - firstType: 0
+    secondType: 1
+    virtue: Advertency
+    vice: Indifference
+  - firstType: 0
+    secondType: 4
+    virtue: Selflessness
+    vice: Egoism
+  - firstType: 0
+    secondType: 2
+    virtue: 'Memory '
+    vice: Forgetfulness
+  - firstType: 3
+    secondType: 1
+    virtue: 'Confidence '
+    vice: Indecisiveness
+  - firstType: 3
+    secondType: 4
+    virtue: 'Assertiveness '
+    vice: "\u0421omplaisance"
+  - firstType: 3
+    secondType: 2
+    virtue: 'Justice '
+    vice: Pragmacity
+  - firstType: 1
+    secondType: 4
+    virtue: 'Tactfullness '
+    vice: Indelicacy
+  - firstType: 1
+    secondType: 2
+    virtue: 'Patience '
+    vice: Temper
+  - firstType: 4
+    secondType: 2
+    virtue: Musicality
+    vice: Discordant voice

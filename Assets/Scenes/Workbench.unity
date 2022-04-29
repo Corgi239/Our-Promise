@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: cut
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3314427733221688352, guid: 914f374d4a82944d6b1ac1f9bb6dc7af, type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3314427733221688354, guid: 914f374d4a82944d6b1ac1f9bb6dc7af, type: 3}
       propertyPath: m_Name
       value: Small-Gem (2)
@@ -445,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ac7c9f9371642c6be8b54ffb360ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemData: {fileID: 11400000, guid: 63760222cc8fa4ff386282abd478c86b, type: 2}
+  gemData: {fileID: 11400000, guid: 2b23f42a7306c48f9b79c4e1c86bdb45, type: 2}
   slots:
   - {fileID: 331839401}
   - {fileID: 2091525675}
@@ -657,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ac7c9f9371642c6be8b54ffb360ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemData: {fileID: 0}
+  gemData: {fileID: 11400000, guid: 2b23f42a7306c48f9b79c4e1c86bdb45, type: 2}
   slots:
   - {fileID: 1600152806}
   - {fileID: 154643927}
@@ -1121,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 880248926394054040, guid: 2f820159b6f4c4127a5df8173db993be, type: 3}
       propertyPath: type
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3333703150402710273, guid: 2f820159b6f4c4127a5df8173db993be, type: 3}
       propertyPath: m_RootOrder
@@ -1291,7 +1295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3849848606670939997, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
       propertyPath: type
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3849848606670939998, guid: 0edcfaef615794820b997ad9fca0ea9b, type: 3}
       propertyPath: m_Name
