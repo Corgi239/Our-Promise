@@ -26,10 +26,6 @@ MonoBehaviour:
     size: 2
     sprite: {fileID: 21300000, guid: 4e26ce0aacda94f89b099893ade6cbab, type: 3}
   - type: 0
-    cut: 0
-    size: 2
-    sprite: {fileID: 21300000, guid: 4e26ce0aacda94f89b099893ade6cbab, type: 3}
-  - type: 0
     cut: 1
     size: 0
     sprite: {fileID: 21300000, guid: 014d75ccce960422ea29be0b6ce0ac19, type: 3}
@@ -53,3 +49,39 @@ MonoBehaviour:
     cut: 2
     size: 2
     sprite: {fileID: 21300000, guid: 493832c67947d4a46a07b36fcbeb6731, type: 3}
+  - type: 1
+    cut: 0
+    size: 0
+    sprite: {fileID: 21300000, guid: 7a885f80147db4c289bdd56197a7f8f4, type: 3}
+  - type: 1
+    cut: 0
+    size: 1
+    sprite: {fileID: 21300000, guid: 7c0430e2fd345465194c526a54b970ed, type: 3}
+  - type: 1
+    cut: 0
+    size: 2
+    sprite: {fileID: 21300000, guid: a4332844584134f8cac71d15f4ef949d, type: 3}
+  - type: 1
+    cut: 1
+    size: 0
+    sprite: {fileID: 21300000, guid: ddccdc88975fd46d7819ea7d19da28d3, type: 3}
+  - type: 1
+    cut: 1
+    size: 1
+    sprite: {fileID: 21300000, guid: b53fcf6d7964d43e49cf6c602f851d0a, type: 3}
+  - type: 1
+    cut: 1
+    size: 2
+    sprite: {fileID: 21300000, guid: abfb8fe71837d49bf8443995785dbc17, type: 3}
+  - type: 1
+    cut: 2
+    size: 0
+    sprite: {fileID: 21300000, guid: 46793d5077ff54ba28d69e2cf0f90e17, type: 3}
+  - type: 1
+    cut: 2
+    size: 1
+    sprite: {fileID: 21300000, guid: 2e859642047af44c8b992833bf573413, type: 3}
+  - type: 1
+    cut: 2
+    size: 2
+    sprite: {fileID: 21300000, guid: fe5c25982b7b04479b3197a94f8f5e93, type: 3}
