@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: -635365581
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4479a1ddf2a184d2cad1a7ae7228667c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b7445daceb484206a31f158f3da4c86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.08, y: 0.08}
+  m_Size: {x: 0.3125, y: 0.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,8 +101,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.21875, y: 0.21875}
-    newSize: {x: 0.08, y: 0.08}
+    oldSize: {x: 0.3125, y: 0.3125}
+    newSize: {x: 0.3125, y: 0.3125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f97509087a94acca6f6c30675675e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemData: {fileID: 11400000, guid: 63760222cc8fa4ff386282abd478c86b, type: 2}
+  gemData: {fileID: 11400000, guid: 2b23f42a7306c48f9b79c4e1c86bdb45, type: 2}
   size: 0
   type: 0
+  cut: 0
   currentSlot: {fileID: 0}

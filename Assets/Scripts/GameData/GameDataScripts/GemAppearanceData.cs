@@ -9,7 +9,7 @@ public class GemAppearanceData : ScriptableObject
     [SerializeField] private GemAppearanceRecord[] appearances;
     public Dictionary<(GemType, GemSize, GemCut), Sprite> Sprite;
 
-    public void OnEnable()
+    public void Initialize()
     {
         Sprite = new Dictionary<(GemType, GemSize, GemCut), Sprite>();
         foreach (GemAppearanceRecord record in appearances) {
