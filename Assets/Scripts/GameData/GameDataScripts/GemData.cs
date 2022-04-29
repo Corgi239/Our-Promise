@@ -1,30 +1,31 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Gem Data", menuName = "ScriptableObjects/Gem Data", order = 1)]
-public class GemData : ScriptableObject
+namespace GameData.GameDataScripts
 {
-    [SerializeField] private GemAppearanceData appearanceData;
-    [SerializeField] private GemTextualData textualData;
-
-    public Dictionary<(GemType, GemSize, GemCut), Sprite> Sprite;
-    public Dictionary<GemType, string> BodyEffect;
-    public Dictionary<GemType, string> ReflexEffect;
-    public Dictionary<GemType, string> MindEffect;
-    public Dictionary<HashSet<GemType>, string> Virtue;
-    public Dictionary<HashSet<GemType>, string> Vice;
-
-    public void OnValidate()
+    [CreateAssetMenu(fileName = "New Gem Data", menuName = "ScriptableObjects/Gem Data", order = 1)]
+    public class GemData : ScriptableObject
     {
-        appearanceData.Initialize();
-        textualData.Initialize();
-        Sprite = appearanceData.Sprite;
-        BodyEffect = textualData.BodyEffect;
-        ReflexEffect = textualData.ReflexEffect;
-        MindEffect = textualData.MindEffect;
-        Virtue = textualData.Virtue;
-        Vice = textualData.Vice;
+        [SerializeField] private GemAppearanceData appearanceData;
+        [SerializeField] private GemTextualData textualData;
+
+        public Dictionary<(GemType, GemSize, GemCut), Sprite> Sprite;
+        public Dictionary<GemType, string> BodyEffect;
+        public Dictionary<GemType, string> ReflexEffect;
+        public Dictionary<GemType, string> MindEffect;
+        public Dictionary<HashSet<GemType>, string> Virtue;
+        public Dictionary<HashSet<GemType>, string> Vice;
+
+        public void OnValidate()
+        {
+            appearanceData.Initialize();
+            textualData.Initialize();
+            Sprite = appearanceData.Sprite;
+            BodyEffect = textualData.BodyEffect;
+            ReflexEffect = textualData.ReflexEffect;
+            MindEffect = textualData.MindEffect;
+            Virtue = textualData.Virtue;
+            Vice = textualData.Vice;
+        }
     }
 }
