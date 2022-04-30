@@ -99,6 +99,7 @@ public class ResonantPair
     {
         GameObject connectionObject = new GameObject("Connection", typeof(LineRenderer));
         LineRenderer renderer = connectionObject.GetComponent<LineRenderer>();
+        renderer.sortingLayerName = "ResonanceLines";
         renderer.startWidth = 0.05f;
         renderer.material = _gemData.resonanceConnectionMaterial;
         renderer.useWorldSpace = false;
