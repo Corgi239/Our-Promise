@@ -10,6 +10,7 @@ namespace GameData.GameDataScripts
     {
         [SerializeField] private GemAppearanceRecord[] appearances;
         public Dictionary<(GemType, GemSize, GemCut), Sprite> Sprite;
+        [SerializeField] public Material resonanceConnectionMaterial;
 
         public void Initialize()
         {

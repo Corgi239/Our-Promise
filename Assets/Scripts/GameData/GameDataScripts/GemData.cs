@@ -15,6 +15,7 @@ namespace GameData.GameDataScripts
         public Dictionary<GemType, string> MindEffect;
         public Dictionary<HashSet<GemType>, string> Virtue;
         public Dictionary<HashSet<GemType>, string> Vice;
+        public Material resonanceConnectionMaterial;
 
         public void OnValidate()
         {
@@ -26,6 +27,7 @@ namespace GameData.GameDataScripts
             MindEffect = textualData.MindEffect;
             Virtue = textualData.Virtue;
             Vice = textualData.Vice;
+            resonanceConnectionMaterial = appearanceData.resonanceConnectionMaterial;
         }
     }
 }

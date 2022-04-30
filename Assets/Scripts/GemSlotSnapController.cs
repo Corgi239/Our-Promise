@@ -29,7 +29,7 @@ public class GemSlotSnapController : MonoBehaviour
     {
         if (gem.currentSlot == null) { return; }
 
-        gem.currentSlot.occupant = null;
+        gem.currentSlot.Occupant = null;
         gem.currentSlot = null;
         gem.transform.parent = null;
         gem.transform.position = new Vector3(gem.transform.position.x, gem.transform.position.y, 0);
@@ -54,7 +54,7 @@ public class GemSlotSnapController : MonoBehaviour
         }
 
         if (nearestSlot != null && closestDistance <= snapRange) {
-            nearestSlot.occupant = gem;
+            nearestSlot.Occupant = gem;
             gem.currentSlot = nearestSlot;
             Transform gemTransform = gem.transform;
             gemTransform.parent = nearestSlot.transform;

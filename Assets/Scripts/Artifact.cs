@@ -10,27 +10,30 @@ public class Artifact : MonoBehaviour
     [SerializeField] protected GemData gemData;
     [SerializeField] private GemSlot[] slots;
     [SerializeField] private ArtifactMaterial material;
-    [SerializeField] private ResonantPair[] resonantPairs;
+    private ResonantPair[] resonantPairs;
 
     public void Awake()
     {
+        foreach(GemSlot slot in slots) {slot.Initialize();}
         int l = slots.Length;
         List<ResonantPair> pairs = new List<ResonantPair>();
         for (int i = 0; i < l-1; i++) {
             for (int j = i + 1; j < l; j++) {
-                pairs.Add(new ResonantPair(slots[i], slots[j]));
+                ResonantPair newPair = new ResonantPair(slots[i], slots[j]);
+                newPair.SetGemData(gemData);
+                pairs.Add(newPair);
+                newPair.UpdateConnection();
             }
         }
-        pairs.First().SetGemData(this.gemData);
-        this.resonantPairs = pairs.ToArray();
+        resonantPairs = pairs.ToArray();
     }
 
     private Gem[] Gems()
     {
-        return this.slots.Select(s => s.occupant).OfType<Gem>().ToArray(); 
+        return slots.Select(s => s.Occupant).OfType<Gem>().ToArray(); 
     }
     
-    private Gem LargestGem()
+    private Gem LargestGem() 
     {
         if (Array.Exists(Gems(), g => g.size == GemSize.Large)) { 
             return Array.Find(Gems(), g => g.size == GemSize.Large);
@@ -76,12 +79,42 @@ public class ResonantPair
 {
     [SerializeField] private GemSlot slot1;
     [SerializeField] private GemSlot slot2;
+    private LineRenderer connectionRenderer;
     private static GemData _gemData;
     
     public ResonantPair(GemSlot firstSlot, GemSlot secondSlot)
     {
         this.slot1 = firstSlot;
         this.slot2 = secondSlot;
+        InitializeCallbacks();
+    }
+
+    private void InitializeCallbacks()
+    {
+        slot1.occupantChangeCallbacks.Add(this.UpdateConnection);
+        slot2.occupantChangeCallbacks.Add(this.UpdateConnection);
+    }
+
+    private void CreateConnection()
+    {
+        GameObject connectionObject = new GameObject("Connection", typeof(LineRenderer));
+        LineRenderer renderer = connectionObject.GetComponent<LineRenderer>();
+        renderer.startWidth = 0.05f;
+        renderer.material = _gemData.resonanceConnectionMaterial;
+        renderer.useWorldSpace = false;
+        renderer.transform.parent = slot1.transform;
+        renderer.positionCount = 2;
+        renderer.SetPosition(0, slot1.transform.position);
+        renderer.SetPosition(1, slot2.transform.position);
+        this.connectionRenderer = renderer;
+    }
+
+    public void UpdateConnection()
+    {
+        if (connectionRenderer == null) {
+            CreateConnection();
+        }
+        connectionRenderer.enabled = IsInResonance();
     }
 
     public void SetGemData(GemData gemData) { _gemData = gemData; }
@@ -89,14 +122,14 @@ public class ResonantPair
     public bool IsInResonance()
     {
         return slot1.IsOccupied() && slot2.IsOccupied() && 
-               (slot1.occupant.type != slot2.occupant.type) && 
-               (slot1.occupant.cut == slot2.occupant.cut);
+               (slot1.Occupant.type != slot2.Occupant.type) && 
+               (slot1.Occupant.cut == slot2.Occupant.cut);
     }
 
     public override string ToString()
     {
         if (IsInResonance()) {
-            var set = new HashSet<GemType> {slot1.occupant.type, slot2.occupant.type};
+            var set = new HashSet<GemType> {slot1.Occupant.type, slot2.Occupant.type};
             return _gemData.Virtue[set];
         } else {
             return $"[{slot1}] and [{slot2}] out of resonance";

@@ -7,26 +7,43 @@ using UnityEngine.Serialization;
 public class GemSlot : MonoBehaviour
 {
    public GemSize slotSize;
-   [CanBeNull] public Gem occupant;
+   private Gem _occupant;
+   public delegate void OccupantChangeCallback();
+   public List<OccupantChangeCallback> occupantChangeCallbacks;
+   [CanBeNull]
+   public Gem Occupant
+   {
+      get => _occupant;
+      set
+      {
+         _occupant = value;
+         foreach (OccupantChangeCallback callback in occupantChangeCallbacks) {
+            callback();
+         }
+      }
+   }
+
+   public void Initialize()
+   {
+      occupantChangeCallbacks = new List<OccupantChangeCallback>();
+   }
 
    public bool IsVacant()
    {
-      return occupant == null;
+      return Occupant == null;
    }
-
    public bool IsOccupied()
    {
       return !IsVacant();
    }
    public bool Fits(Gem gem)
    {
-      return slotSize == gem.size && occupant == null;
+      return slotSize == gem.size && Occupant == null;
    }
-
    public override string ToString()
    {
       if (IsOccupied()) {
-         return $"a {slotSize} slot with {occupant.ToString()}";
+         return $"a {slotSize} slot with {Occupant.ToString()}";
       } else {
          return $"an empty {slotSize} slot";
       }
