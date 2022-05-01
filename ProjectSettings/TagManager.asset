@@ -17,8 +17,8 @@ TagManager:
   - 
   - Artifacts
   - Gemstones
-  - 
-  - 
+  - ResonanceLines
+  - Tools
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Gemstones
     uniqueID: 3659601715
+    locked: 0
+  - name: Tools
+    uniqueID: 690439851
     locked: 0
