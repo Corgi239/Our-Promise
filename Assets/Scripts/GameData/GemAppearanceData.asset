@@ -193,3 +193,4 @@ MonoBehaviour:
     cut: 2
     size: 2
     sprite: {fileID: 21300000, guid: 13da3dac887404d04a1745df95c77374, type: 3}
+  resonanceConnectionMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}

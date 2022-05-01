@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appearanceData: {fileID: 11400000, guid: 3e02a55c1b11a402b8c1fd4fd842d253, type: 2}
   textualData: {fileID: 11400000, guid: f20c1886b46d74f13b46a40139e05f0d, type: 2}
+  resonanceConnectionMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}

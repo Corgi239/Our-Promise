@@ -98,6 +98,7 @@ public class ResonantPair
     private void CreateConnection()
     {
         GameObject connectionObject = new GameObject("Connection", typeof(LineRenderer));
+        connectionObject.layer = LayerMask.NameToLayer("ResonanceLines");
         LineRenderer renderer = connectionObject.GetComponent<LineRenderer>();
         renderer.sortingLayerName = "ResonanceLines";
         renderer.startWidth = 0.05f;
