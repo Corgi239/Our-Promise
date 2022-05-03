@@ -8,7 +8,7 @@ using Object = System.Object;
 public class GemSlotSnapController : MonoBehaviour
 {
     private List<GemSlot> _slots;
-    private List<Gem> _gems;
+    [SerializeField] private List<Gem> _gems;
     [SerializeField] private float snapRange = 0.8f;
 
     public void Start()
@@ -28,7 +28,6 @@ public class GemSlotSnapController : MonoBehaviour
     private void DetachFromSlot(Gem gem)
     {
         if (gem.currentSlot == null) { return; }
-
         gem.currentSlot.Occupant = null;
         gem.currentSlot = null;
         gem.transform.parent = null;

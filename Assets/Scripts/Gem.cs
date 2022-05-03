@@ -16,7 +16,7 @@ public class Gem : Draggable
     public delegate void DragEndedCallback(Gem gem);
     public DragEndedCallback dragEndedCallback;
     public delegate void DragStartedCallback(Gem gem);
-    public DragEndedCallback dragStartedCallback;
+    public DragStartedCallback dragStartedCallback;
 
     private SpriteRenderer _renderer;
     [CanBeNull] public GemSlot currentSlot;
@@ -25,6 +25,7 @@ public class Gem : Draggable
     {
         base.Awake();
         _renderer = GetComponent<SpriteRenderer>();
+        currentSlot = GetComponentInParent<GemSlot>();
     }
 
     public void Start()
