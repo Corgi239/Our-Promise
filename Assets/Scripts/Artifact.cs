@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using GameData.GameDataScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Artifact : MonoBehaviour
 {
-    [SerializeField] protected GemData gemData;
+    [FormerlySerializedAs("gemData")] [SerializeField] protected GameData.GameDataScripts.GameData gameData;
     [SerializeField] private GemSlot[] slots;
     [SerializeField] private ArtifactMaterial material;
+    [SerializeField] private float resonanceLineThickness;
     private ResonantPair[] resonantPairs;
 
     public void Awake()
@@ -20,7 +22,7 @@ public class Artifact : MonoBehaviour
         for (int i = 0; i < l-1; i++) {
             for (int j = i + 1; j < l; j++) {
                 ResonantPair newPair = new ResonantPair(slots[i], slots[j]);
-                newPair.SetGemData(gemData);
+                newPair.SetGemData(gameData);
                 pairs.Add(newPair);
                 newPair.UpdateConnection();
             }
@@ -80,7 +82,7 @@ public class ResonantPair
     [SerializeField] private GemSlot slot1;
     [SerializeField] private GemSlot slot2;
     private LineRenderer connectionRenderer;
-    private static GemData _gemData;
+    private static GameData.GameDataScripts.GameData _gameData;
     
     public ResonantPair(GemSlot firstSlot, GemSlot secondSlot)
     {
@@ -101,8 +103,8 @@ public class ResonantPair
         connectionObject.layer = LayerMask.NameToLayer("ResonanceLines");
         LineRenderer renderer = connectionObject.GetComponent<LineRenderer>();
         renderer.sortingLayerName = "ResonanceLines";
-        renderer.startWidth = 0.05f;
-        renderer.material = _gemData.resonanceConnectionMaterial;
+        renderer.startWidth = _gameData.ResonanceLineWidth;
+        renderer.material = _gameData.resonanceConnectionMaterial;
         renderer.useWorldSpace = false;
         renderer.transform.parent = slot1.transform;
         renderer.positionCount = 2;
@@ -119,7 +121,7 @@ public class ResonantPair
         connectionRenderer.enabled = IsInResonance();
     }
 
-    public void SetGemData(GemData gemData) { _gemData = gemData; }
+    public void SetGemData(GameData.GameDataScripts.GameData gameData) { _gameData = gameData; }
 
     public bool IsInResonance()
     {
@@ -132,7 +134,7 @@ public class ResonantPair
     {
         if (IsInResonance()) {
             var set = new HashSet<GemType> {slot1.Occupant.type, slot2.Occupant.type};
-            return _gemData.Virtue[set];
+            return _gameData.Virtue[set];
         } else {
             return $"[{slot1}] and [{slot2}] out of resonance";
         }

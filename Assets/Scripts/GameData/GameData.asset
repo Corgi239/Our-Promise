@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc283e6cb627d4cdc941646b9e0d7823, type: 3}
-  m_Name: GemData
-  m_EditorClassIdentifier: 
+  m_Name: GameData
+  m_EditorClassIdentifier: Assembly-CSharp:GameData.GameDataScripts:GemData
   appearanceData: {fileID: 11400000, guid: 3e02a55c1b11a402b8c1fd4fd842d253, type: 2}
   textualData: {fileID: 11400000, guid: f20c1886b46d74f13b46a40139e05f0d, type: 2}
-  resonanceConnectionMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  ResonanceLineWidth: 0.025
+  resonanceConnectionMaterial: {fileID: 2100000, guid: 55c5536b23b4843bf9844b8d5eef381f, type: 2}

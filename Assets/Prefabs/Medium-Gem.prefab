@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f97509087a94acca6f6c30675675e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemData: {fileID: 11400000, guid: 2b23f42a7306c48f9b79c4e1c86bdb45, type: 2}
+  gameData: {fileID: 11400000, guid: eaca23063eea34b019f3d38d2e571558, type: 2}
   size: 1
   type: 4
-  cut: 0
+  cut: 2
   currentSlot: {fileID: 0}

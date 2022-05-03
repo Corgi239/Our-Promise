@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace GameData.GameDataScripts
 {
-    [CreateAssetMenu(fileName = "New Gem Data", menuName = "ScriptableObjects/Gem Data", order = 1)]
-    public class GemData : ScriptableObject
+    [CreateAssetMenu(fileName = "New Game Data", menuName = "ScriptableObjects/Game Data", order = 1)]
+    public class GameData : ScriptableObject
     {
         [SerializeField] private GemAppearanceData appearanceData;
         [SerializeField] private GemTextualData textualData;
+        public float ResonanceLineWidth;
 
         public Dictionary<(GemType, GemSize, GemCut), Sprite> Sprite;
         public Dictionary<GemType, string> BodyEffect;

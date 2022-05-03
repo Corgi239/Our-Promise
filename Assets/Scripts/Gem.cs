@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public class Gem : Draggable
 {
-    [SerializeField] private GemData gemData;
+    [SerializeField] private GameData.GameDataScripts.GameData gameData;
     public GemSize size;
     public GemType type;
     public GemCut cut;
@@ -29,7 +29,7 @@ public class Gem : Draggable
 
     public void Start()
     {
-        _renderer.sprite = gemData.Sprite[(type, size, cut)];
+        _renderer.sprite = gameData.Sprite[(type, size, cut)];
     }
 
     public override void OnMouseDown()
@@ -53,13 +53,13 @@ public class Gem : Draggable
         string effect = "Unknown material";
         switch (material) {
             case ArtifactMaterial.Iron:
-                effect = gemData.BodyEffect[type];
+                effect = gameData.BodyEffect[type];
                 break;
             case ArtifactMaterial.Wood:
-                effect =  gemData.ReflexEffect[type];
+                effect =  gameData.ReflexEffect[type];
                 break;
             case ArtifactMaterial.Bone:
-                effect = gemData.MindEffect[type];
+                effect = gameData.MindEffect[type];
                 break;
         }
         return effect;
