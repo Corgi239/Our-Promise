@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -7,7 +8,7 @@ using UnityEngine.Serialization;
 public class GemSlot : MonoBehaviour
 {
    public GemSize slotSize;
-   private Gem _occupant;
+   [CanBeNull] [SerializeField] private Gem _occupant;
    public delegate void OccupantChangeCallback();
    public List<OccupantChangeCallback> occupantChangeCallbacks;
    [CanBeNull]
@@ -21,6 +22,11 @@ public class GemSlot : MonoBehaviour
             callback();
          }
       }
+   }
+
+   public void Start()
+   {
+      Occupant = GetComponentInChildren<Gem>();
    }
 
    public void Initialize()
