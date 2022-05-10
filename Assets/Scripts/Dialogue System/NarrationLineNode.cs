@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace xNode
+namespace Dialogue_System
 {
-    public class DialogueNode : BaseNode
+    public class NarrationLineNode : BaseNode
     {
         [Input] public int entry;
         [Output] public int exit;
@@ -13,17 +13,17 @@ namespace xNode
 
         private string GetDialogueLine(Language lang=Language.ENG)
         {
-            if (lang == Language.ENG)
-                return dialogueLineENG;
-            if (lang == Language.RUS)
-                return dialogueLineRUS;
-            else
-                return "language not supported";
+            return lang switch
+            {
+                Language.ENG => dialogueLineENG,
+                Language.RUS => dialogueLineRUS,
+                _ => "Unsupported Language"
+            };
         }
 
-        public override string GetString()
+        public override string GetDataString()
         {
-            return $"DialogueNode/{speakerName}/{GetDialogueLine()}";
+            return $"NarrationLineNode/{speakerName}/{GetDialogueLine()}";
         }
     
         public override Sprite GetSprite()
