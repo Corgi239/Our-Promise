@@ -5,7 +5,7 @@ namespace Dialogue_System
     public class EndNode: BaseNode
     {
         [Input] public Connection entry;
-        public override string GetDataString()
+        public override string GetDataString(Language lang)
         {
             return "EndNode";
         }

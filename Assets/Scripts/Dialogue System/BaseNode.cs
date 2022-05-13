@@ -6,7 +6,7 @@ namespace Dialogue_System
 {
 	public class BaseNode : Node
 	{
-		public virtual string GetDataString()
+		public virtual string GetDataString(Language lang)
 		{
 			return null;
 		}
@@ -24,6 +24,8 @@ namespace Dialogue_System
 		}
 	}
 
+	public enum Language {ENG, RUS}
+	
 	[Serializable]
 	public struct Connection { }
 }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Dialogue_System
 {
@@ -33,9 +32,9 @@ namespace Dialogue_System
             };
         }
 
-        public override string GetDataString()
+        public override string GetDataString(Language lang)
         {
-            return $"NarrationLineNode/{GetSpeakerName()}/{GetDialogueLine()}";
+            return $"NarrationLineNode/{GetSpeakerName(lang)}/{GetDialogueLine(lang)}";
         }
     
         public override Sprite GetSprite()
@@ -45,5 +44,5 @@ namespace Dialogue_System
     
     }
 
-    public enum Language {ENG, RUS}
+
 }

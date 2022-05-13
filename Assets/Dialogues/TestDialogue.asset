@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8625969106871128125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -8625969106871128125}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: replies 0
+        node: {fileID: 2581836655842441157}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -8625969106871128125}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -1054041631910233487}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: Obi-Wan
+  speakerRUS: 
+  lineENG: Wha?..
+  lineRUS: 
+  sprite: {fileID: 21300000, guid: 830e2e4d273f94f83a67a7333b1fd48c, type: 3}
 --- !u!114 &-5990799234771383229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +61,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 56, y: 24}
+  position: {x: 120, y: -8}
   ports:
     keys:
     - entry
@@ -37,7 +85,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 860335562325486020}
+        node: {fileID: 2581836655842441157}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -48,6 +96,66 @@ MonoBehaviour:
   lineENG: General Kenobi
   lineRUS: 
   sprite: {fileID: 21300000, guid: 7f6e2613a414f484ea1abefe66a586fb, type: 3}
+--- !u!114 &-2179645981490866379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270c76761b9642d8ac3e117a1a7555a2, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 888, y: 184}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: -2179645981490866379}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6954468518125270545}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+--- !u!114 &-1054041631910233487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270c76761b9642d8ac3e117a1a7555a2, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 888, y: -72}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1054041631910233487}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -8625969106871128125}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,8 +172,12 @@ MonoBehaviour:
   - {fileID: 791625476608547886}
   - {fileID: 5820036366218339643}
   - {fileID: -5990799234771383229}
-  - {fileID: 860335562325486020}
-  current: {fileID: 860335562325486020}
+  - {fileID: 2581836655842441157}
+  - {fileID: -8625969106871128125}
+  - {fileID: 6954468518125270545}
+  - {fileID: -1054041631910233487}
+  - {fileID: -2179645981490866379}
+  current: {fileID: -1054041631910233487}
 --- !u!114 &791625476608547886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +191,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -424, y: 24}
+  position: {x: -392, y: -8}
   ports:
     keys:
     - exit
@@ -96,7 +208,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
---- !u!114 &860335562325486020
+--- !u!114 &2581836655842441157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,17 +217,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c76761b9642d8ac3e117a1a7555a2, type: 3}
-  m_Name: End
+  m_Script: {fileID: 11500000, guid: 0a12293747284e83a837b2eb38e9bb23, type: 3}
+  m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 296, y: 24}
+  position: {x: 376, y: -8}
   ports:
     keys:
     - entry
+    - replies
+    - replies 0
+    - replies 1
     values:
     - _fieldName: entry
-      _node: {fileID: 860335562325486020}
+      _node: {fileID: 2581836655842441157}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
@@ -126,6 +241,48 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: replies
+      _node: {fileID: 2581836655842441157}
+      _typeQualifiedName: System.Collections.Generic.List`1[[Dialogue_System.Reply,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: replies 0
+      _node: {fileID: 2581836655842441157}
+      _typeQualifiedName: Dialogue_System.Reply, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -8625969106871128125}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: replies 1
+      _node: {fileID: 2581836655842441157}
+      _typeQualifiedName: Dialogue_System.Reply, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6954468518125270545}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  replies:
+  - replyENG: '[1] Sorry to interrupt..'
+    replyRUS: 
+  - replyENG: '[2] Don''t mind me'
+    replyRUS: 
+  speakerENG: Yon
+  speakerRUS: "\u0419\u043E\u043D"
+  sprite: {fileID: 21300000, guid: 4e26ce0aacda94f89b099893ade6cbab, type: 3}
 --- !u!114 &5820036366218339643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +296,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -184, y: 24}
+  position: {x: -136, y: -8}
   ports:
     keys:
     - entry
@@ -174,3 +331,51 @@ MonoBehaviour:
   lineENG: Hello there!
   lineRUS: 
   sprite: {fileID: 21300000, guid: 830e2e4d273f94f83a67a7333b1fd48c, type: 3}
+--- !u!114 &6954468518125270545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 184}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6954468518125270545}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: replies 1
+        node: {fileID: 2581836655842441157}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6954468518125270545}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -2179645981490866379}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: Grievous
+  speakerRUS: 
+  lineENG: '*Cough cough*'
+  lineRUS: 
+  sprite: {fileID: 21300000, guid: 7f6e2613a414f484ea1abefe66a586fb, type: 3}
