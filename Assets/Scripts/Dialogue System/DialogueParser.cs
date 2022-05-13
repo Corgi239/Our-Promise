@@ -28,7 +28,6 @@ namespace Dialogue_System
         {
             BaseNode currentNode = graph.current;
             string[] data = currentNode.GetDataString().Split('/');
-            Debug.Log(data);
             switch (data[0]) {
                 case "StartNode":
                     EnableUI();

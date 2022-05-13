@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using XNode;
 
 namespace Dialogue_System
@@ -22,4 +23,7 @@ namespace Dialogue_System
 			return null;
 		}
 	}
+
+	[Serializable]
+	public struct Connection { }
 }

@@ -21,8 +21,8 @@ MonoBehaviour:
     values:
     - _fieldName: entry
       _node: {fileID: -5990799234771383229}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
         node: {fileID: 5820036366218339643}
@@ -33,8 +33,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: exit
       _node: {fileID: -5990799234771383229}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
         node: {fileID: 860335562325486020}
@@ -43,12 +43,11 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  entry: 0
-  exit: 0
-  speakerName: Grievous
-  speakerSprite: {fileID: 21300000, guid: 7f6e2613a414f484ea1abefe66a586fb, type: 3}
-  dialogueLineENG: General Kenobi
-  dialogueLineRUS: 
+  speakerENG: Grievous
+  speakerRUS: 
+  lineENG: General Kenobi
+  lineRUS: 
+  sprite: {fileID: 21300000, guid: 7f6e2613a414f484ea1abefe66a586fb, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +86,8 @@ MonoBehaviour:
     values:
     - _fieldName: exit
       _node: {fileID: 791625476608547886}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
         node: {fileID: 5820036366218339643}
@@ -97,7 +96,6 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  exit: 0
 --- !u!114 &860335562325486020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,8 +116,8 @@ MonoBehaviour:
     values:
     - _fieldName: entry
       _node: {fileID: 860335562325486020}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
         node: {fileID: -5990799234771383229}
@@ -128,7 +126,6 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  entry: 0
 --- !u!114 &5820036366218339643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +147,8 @@ MonoBehaviour:
     values:
     - _fieldName: entry
       _node: {fileID: 5820036366218339643}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
         node: {fileID: 791625476608547886}
@@ -162,8 +159,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: exit
       _node: {fileID: 5820036366218339643}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
         node: {fileID: -5990799234771383229}
@@ -172,9 +169,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  entry: 0
-  exit: 0
-  speakerName: Obi-Wan
-  speakerSprite: {fileID: 21300000, guid: 830e2e4d273f94f83a67a7333b1fd48c, type: 3}
-  dialogueLineENG: Hello there!
-  dialogueLineRUS: 
+  speakerENG: Obi-Wan
+  speakerRUS: 
+  lineENG: Hello there!
+  lineRUS: 
+  sprite: {fileID: 21300000, guid: 830e2e4d273f94f83a67a7333b1fd48c, type: 3}
