@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Dialogue_System
 {
@@ -39,14 +40,15 @@ namespace Dialogue_System
     [Serializable]
     public struct Reply
     {
-        public string replyENG;
-        public string replyRUS;
+        public string replyName;
+        public string lineENG;
+        public string lineRUS;
         public string GetReply(Language lang = Language.ENG)
         {
             return lang switch
             {
-                Language.ENG => replyENG,
-                Language.RUS => replyRUS,
+                Language.ENG => lineENG,
+                Language.RUS => lineRUS,
                 _ => "Unsupported Language"
             };
         }

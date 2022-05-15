@@ -45,7 +45,7 @@ MonoBehaviour:
       _dynamic: 0
   speakerENG: Obi-Wan
   speakerRUS: 
-  lineENG: Wha?..
+  lineENG: Wha?.. You are not supposen to be here!
   lineRUS: 
   sprite: {fileID: 21300000, guid: 830e2e4d273f94f83a67a7333b1fd48c, type: 3}
 --- !u!114 &-5990799234771383229
@@ -93,7 +93,7 @@ MonoBehaviour:
       _dynamic: 0
   speakerENG: Grievous
   speakerRUS: 
-  lineENG: General Kenobi
+  lineENG: General Kenobi.
   lineRUS: 
   sprite: {fileID: 21300000, guid: 7f6e2613a414f484ea1abefe66a586fb, type: 3}
 --- !u!114 &-2179645981490866379
@@ -177,7 +177,7 @@ MonoBehaviour:
   - {fileID: 6954468518125270545}
   - {fileID: -1054041631910233487}
   - {fileID: -2179645981490866379}
-  current: {fileID: -1054041631910233487}
+  current: {fileID: -2179645981490866379}
 --- !u!114 &791625476608547886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,13 +276,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   replies:
-  - replyENG: '[1] Sorry to interrupt..'
-    replyRUS: 
-  - replyENG: '[2] Don''t mind me'
-    replyRUS: 
-  speakerENG: Yon
-  speakerRUS: "\u0419\u043E\u043D"
-  sprite: {fileID: 21300000, guid: 4e26ce0aacda94f89b099893ade6cbab, type: 3}
+  - replyName: Greet Obi-Wan
+    lineENG: '[1] Slow down, Master Jedi.'
+    lineRUS: 
+  - replyName: Greet Grievous
+    lineENG: '[2] Stop right there, General!'
+    lineRUS: 
+  speakerENG: Bobba Fett
+  speakerRUS: 
+  sprite: {fileID: 21300000, guid: beaa71c7567024cc3bc96c61ffc8a8e7, type: 3}
 --- !u!114 &5820036366218339643
 MonoBehaviour:
   m_ObjectHideFlags: 0
