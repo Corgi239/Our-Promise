@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4839d2f0520ef48638a8af2bd775ce05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
-  graph: {fileID: 11400000, guid: f711cc7c32c50473195925d75460edf7, type: 2}
+  language: 1
+  graph: {fileID: 11400000, guid: 4980ac1285baf4353a2531abb83d28cf, type: 2}
   speakerNameText: {fileID: 1723242108}
   narrationLineText: {fileID: 1486922681}
   speakerImage: {fileID: 672954456}
