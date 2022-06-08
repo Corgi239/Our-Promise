@@ -15,22 +15,24 @@ namespace Dialogue_System
     {
         [SerializeField] private Language language;
         [SerializeField] private DialogueGraph graph;
+        [SerializeField] private NarrativeState stateTemplate;
         public TextMeshProUGUI speakerNameText;
         public TextMeshProUGUI narrationLineText;
         public Image speakerImage;
         private Coroutine _parser;
+        private NarrativeState _state;
         public void Start()
         {
             ResetGraph();
             DisableUI();
+            _state = Instantiate(stateTemplate);
             _parser = StartCoroutine(ParseNode());
-            
         }
 
         private IEnumerator ParseNode()
         {
             BaseNode currentNode = graph.current;
-            string[] data = currentNode.GetDataString(language).Split('/');
+            string[] data = currentNode.GetDataString(language, _state).Split('/');
             switch (data[0]) {
                 case "StartNode":
                     EnableUI();
@@ -51,7 +53,8 @@ namespace Dialogue_System
                     speakerNameText.text = data[1];
                     speakerImage.sprite = currentNode.GetSprite();
                     var replies = data.Skip(2).ToArray();
-                    narrationLineText.text = replies.Aggregate("", (current, reply) => current + reply + '\n');
+                    narrationLineText.text = replies.Select((value, index) => new {value, index})
+                        .Aggregate("", (current, reply) => $"{current} [{reply.index + 1}] {reply.value}" + '\n');
                     int nextPortNumber = -1;
                     while (nextPortNumber == -1) {
                         yield return new WaitUntil(() =>
@@ -64,6 +67,24 @@ namespace Dialogue_System
                         }
                     }
                     ToNextNode($"replies {nextPortNumber}");
+                    break;
+                case "ConditionNode":
+                    switch(data[1])
+                    {
+                        case "Pass":
+                            ToNextNode("pass");
+                            break;
+                        default: 
+                            ToNextNode("fail");
+                            break;
+                    }
+                    break;
+                case "FactNode":
+                    foreach (string s in data.Skip(1)) {
+                        string[] pair = s.Split(":");
+                        _state.SetFact(pair[0], Int32.Parse(pair[1]));
+                    }
+                    ToNextNode("exit");
                     break;
             }
         }

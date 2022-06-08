@@ -10,7 +10,7 @@ public class SerializableDictionaryPropertyDrawer : PropertyDrawer
 	const string KeysFieldName = "m_keys";
 	const string ValuesFieldName = "m_values";
 	protected const float IndentWidth = 15f;
-	protected const float KeyElementWidthScaler = 1.5f;
+	protected const float KeyElementWidthScaler = 1.7f;
 
 	static GUIContent s_iconPlus = IconContent ("Toolbar Plus", "Add entry");
 	static GUIContent s_iconMinus = IconContent ("Toolbar Minus", "Remove entry");
@@ -225,20 +225,20 @@ public class SerializableDictionaryPropertyDrawer : PropertyDrawer
 
 	static float DrawKeyValueLineSimple(SerializedProperty keyProperty, SerializedProperty valueProperty, string keyLabel, string valueLabel, Rect linePosition)
 	{
-		float labelWidth = EditorGUIUtility.labelWidth * KeyElementWidthScaler;
+		float labelWidth = EditorGUIUtility.labelWidth;
 		float labelWidthRelative = labelWidth / linePosition.width;
 
 		float keyPropertyHeight = EditorGUI.GetPropertyHeight(keyProperty);
 		var keyPosition = linePosition;
 		keyPosition.height = keyPropertyHeight;
-		keyPosition.width = labelWidth - IndentWidth;
+		keyPosition.width = labelWidth * KeyElementWidthScaler - IndentWidth;
 		EditorGUIUtility.labelWidth = keyPosition.width * labelWidthRelative;
 		EditorGUI.PropertyField(keyPosition, keyProperty, TempContent(keyLabel), true);
 
 		float valuePropertyHeight = EditorGUI.GetPropertyHeight(valueProperty);
 		var valuePosition = linePosition;
 		valuePosition.height = valuePropertyHeight;
-		valuePosition.xMin += labelWidth;
+		valuePosition.xMin += keyPosition.width + IndentWidth / 2;
 		EditorGUIUtility.labelWidth = valuePosition.width * labelWidthRelative;
 		EditorGUI.indentLevel--;
 		EditorGUI.PropertyField(valuePosition, valueProperty, TempContent(valueLabel), true);
@@ -251,12 +251,12 @@ public class SerializableDictionaryPropertyDrawer : PropertyDrawer
 
 	static float DrawKeyValueLineExpand(SerializedProperty keyProperty, SerializedProperty valueProperty, Rect linePosition)
 	{
-		float labelWidth = EditorGUIUtility.labelWidth * KeyElementWidthScaler;
+		float labelWidth = EditorGUIUtility.labelWidth;
 
 		float keyPropertyHeight = EditorGUI.GetPropertyHeight(keyProperty);
 		var keyPosition = linePosition;
 		keyPosition.height = keyPropertyHeight;
-		keyPosition.width = labelWidth - IndentWidth;
+		keyPosition.width = labelWidth * KeyElementWidthScaler - IndentWidth;
 		EditorGUI.PropertyField(keyPosition, keyProperty, GUIContent.none, true);
 
 		float valuePropertyHeight = EditorGUI.GetPropertyHeight(valueProperty);
