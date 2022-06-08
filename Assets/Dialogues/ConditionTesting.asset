@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8987193833318179935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -776, y: -424}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -8987193833318179935}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -5027458972184335263}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -8987193833318179935}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6420238545915069575}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: 
+  lineENG: To be continued...
+  lineRUS: 
+  sprite: {fileID: 0}
 --- !u!114 &-8669511720901833239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +322,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 6420238545915069575}
+        node: {fileID: -8987193833318179935}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -619,7 +667,8 @@ MonoBehaviour:
   - {fileID: 4165733462103959560}
   - {fileID: 2085072493776819396}
   - {fileID: 6420238545915069575}
-  current: {fileID: 3689024509499210838}
+  - {fileID: -8987193833318179935}
+  current: {fileID: 2085072493776819396}
 --- !u!114 &1825301476952017889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +941,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -744, y: -344}
+  position: {x: -520, y: -424}
   ports:
     keys:
     - entry
@@ -903,7 +952,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -5027458972184335263}
+        node: {fileID: -8987193833318179935}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
