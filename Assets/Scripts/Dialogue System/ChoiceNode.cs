@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +24,10 @@ namespace Dialogue_System
             };
         }
 
-        public override string GetDataString(Language lang)
+        public override string GetDataString(Language lang, NarrativeState facts)
         {
-            string res = $"ChoiceNode/{GetSpeakerName(lang)}/";
-            return replies.Aggregate(res, (current, reply) => current + reply.GetReply(lang) + '/');
+            string res = $"ChoiceNode/{GetSpeakerName(lang)}";
+            return replies.Aggregate(res, (current, reply) => current + '/' + reply.GetReply(lang));
         }
 
         public override Sprite GetSprite()
@@ -41,8 +40,8 @@ namespace Dialogue_System
     public struct Reply
     {
         public string replyName;
-        public string lineENG;
-        public string lineRUS;
+        [TextArea(5,10)] public string lineENG;
+        [TextArea(5,10)] public string lineRUS;
         public string GetReply(Language lang = Language.ENG)
         {
             return lang switch

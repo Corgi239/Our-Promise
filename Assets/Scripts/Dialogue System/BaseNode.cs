@@ -6,7 +6,7 @@ namespace Dialogue_System
 {
 	public class BaseNode : Node
 	{
-		public virtual string GetDataString(Language lang)
+		public virtual string GetDataString(Language lang, NarrativeState facts)
 		{
 			return null;
 		}

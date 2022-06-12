@@ -8,8 +8,8 @@ namespace Dialogue_System
         [Output] public Connection exit;
         public string speakerENG;
         public string speakerRUS;
-        public string lineENG;
-        public string lineRUS;
+        [TextArea(5,10)] public string lineENG;
+        [TextArea(5,10)] public string lineRUS;
         public Sprite sprite;
 
         private string GetDialogueLine(Language lang=Language.ENG)
@@ -32,7 +32,7 @@ namespace Dialogue_System
             };
         }
 
-        public override string GetDataString(Language lang)
+        public override string GetDataString(Language lang, NarrativeState facts)
         {
             return $"NarrationLineNode/{GetSpeakerName(lang)}/{GetDialogueLine(lang)}";
         }
