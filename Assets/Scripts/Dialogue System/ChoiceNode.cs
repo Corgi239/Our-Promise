@@ -39,15 +39,15 @@ namespace Dialogue_System
     [Serializable]
     public struct Reply
     {
-        public string replyName;
-        [TextArea(5,10)] public string lineENG;
-        [TextArea(5,10)] public string lineRUS;
+        public string actionENG;
+        public string actionRUS;
+        
         public string GetReply(Language lang = Language.ENG)
         {
             return lang switch
             {
-                Language.ENG => lineENG,
-                Language.RUS => lineRUS,
+                Language.ENG => actionENG,
+                Language.RUS => actionRUS,
                 _ => "Unsupported Language"
             };
         }
