@@ -10,9 +10,13 @@ public class SceneChanger : MonoBehaviour
     public float transitionTime = 1f;
     private static readonly int Start = Animator.StringToHash("Start");
 
-    public void ToNextScene(string targetScene)
+    public void Awake()
     {
         transition.speed = 1 / transitionTime;
+    }
+
+    public void ToNextScene(string targetScene)
+    {
         StartCoroutine(LoadSceneWithTransition(targetScene));
     }
 
