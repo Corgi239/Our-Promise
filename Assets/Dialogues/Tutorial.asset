@@ -253,10 +253,10 @@ MonoBehaviour:
   replies:
   - replyName: "\u041F\u0440\u0435\u0440\u0432\u0430\u0442\u044C \u0441\u0442\u0430\u0440\u0438\u043A\u0430"
     lineENG: 
-    lineRUS: 
+    lineRUS: "\u041F\u0440\u0435\u0440\u0432\u0430\u0442\u044C \u0441\u0442\u0430\u0440\u0438\u043A\u0430"
   - replyName: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0442\u044C \u0441\u043B\u0443\u0448\u0430\u0442\u044C"
     lineENG: 
-    lineRUS: 
+    lineRUS: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0442\u044C \u0441\u043B\u0443\u0448\u0430\u0442\u044C"
   speakerENG: Yon
   speakerRUS: "\u0419\u043E\u043D"
   sprite: {fileID: 0}
@@ -718,7 +718,10 @@ MonoBehaviour:
       _node: {fileID: -374739270450004591}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: exit
+        node: {fileID: 6433176122725255825}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -836,7 +839,7 @@ MonoBehaviour:
   - {fileID: 3066011699259474750}
   - {fileID: -9070160040973219558}
   - {fileID: 9175879133319131059}
-  current: {fileID: 0}
+  current: {fileID: 9040746185827927582}
 --- !u!114 &731365389218214124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,7 +1622,10 @@ MonoBehaviour:
       _node: {fileID: 6433176122725255825}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: -374739270450004591}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
