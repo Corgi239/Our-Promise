@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Yon's Shop.unity
+    guid: 8a30c89d53df64579b418bd0202a26ee
+  - enabled: 1
     path: Assets/Scenes/Workbench.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
