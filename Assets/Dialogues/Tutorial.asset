@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1912, y: 40}
+  position: {x: 1928, y: 40}
   ports:
     keys:
     - entry
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1144, y: 120}
+  position: {x: 1144, y: 280}
   ports:
     keys:
     - entry
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1656, y: 120}
+  position: {x: 1656, y: 280}
   ports:
     keys:
     - entry
@@ -718,7 +718,10 @@ MonoBehaviour:
       _node: {fileID: -374739270450004591}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: exit
+        node: {fileID: 6433176122725255825}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -836,7 +839,7 @@ MonoBehaviour:
   - {fileID: 3066011699259474750}
   - {fileID: -9070160040973219558}
   - {fileID: 9175879133319131059}
-  current: {fileID: 0}
+  current: {fileID: -7889752968610370953}
 --- !u!114 &731365389218214124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,7 +1437,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1400, y: 120}
+  position: {x: 1400, y: 280}
   ports:
     keys:
     - entry
@@ -1619,7 +1622,10 @@ MonoBehaviour:
       _node: {fileID: 6433176122725255825}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: -374739270450004591}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1647,7 +1653,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 888, y: 120}
+  position: {x: 888, y: 280}
   ports:
     keys:
     - entry
