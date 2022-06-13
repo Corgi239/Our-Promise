@@ -19,6 +19,7 @@ namespace Dialogue_System
         public TextMeshProUGUI speakerNameText;
         public TextMeshProUGUI narrationLineText;
         public Image speakerImage;
+        public Image backsplash;
         private Coroutine _parser;
         private NarrativeState _state;
         public void Start()
@@ -26,6 +27,11 @@ namespace Dialogue_System
             ResetGraph();
             DisableUI();
             _state = Instantiate(stateTemplate);
+            StartDialogue();
+        }
+
+        public void StartDialogue()
+        {
             _parser = StartCoroutine(ParseNode());
         }
 
@@ -117,6 +123,7 @@ namespace Dialogue_System
             speakerNameText.enabled = false;
             narrationLineText.enabled = false;
             speakerImage.enabled = false;
+            backsplash.enabled = false;
         }
 
         private void EnableUI()
@@ -124,6 +131,7 @@ namespace Dialogue_System
             speakerNameText.enabled = true;
             narrationLineText.enabled = true;
             speakerImage.enabled = true;
+            backsplash.enabled = true;
         }
 
     }

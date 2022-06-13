@@ -274,6 +274,7 @@ MonoBehaviour:
   speakerNameText: {fileID: 1723242108}
   narrationLineText: {fileID: 1486922681}
   speakerImage: {fileID: 672954456}
+  backsplash: {fileID: 1226799434}
 --- !u!4 &340262062
 Transform:
   m_ObjectHideFlags: 0
