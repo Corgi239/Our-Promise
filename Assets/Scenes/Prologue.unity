@@ -185,12 +185,63 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 383982490}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 383982490}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Dialogue_System.DialogueParser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267940390856954055, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+      propertyPath: transitionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8267940390856954057, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
       propertyPath: m_Name
       value: SceneTransitioner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71269e53bd5f043de8939617ecc01507, type: 3}
+--- !u!114 &383982490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6967893697932064419, guid: 004bfdbe86fb34c3eb338a507c6c1cc4, type: 3}
+  m_PrefabInstance: {fileID: 6967893697726482958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839d2f0520ef48638a8af2bd775ce05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447641969
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +485,6 @@ GameObject:
   - component: {fileID: 685911086}
   - component: {fileID: 685911085}
   - component: {fileID: 685911084}
-  - component: {fileID: 685911083}
   - component: {fileID: 685911087}
   m_Layer: 0
   m_Name: Clock
@@ -443,20 +493,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &685911083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685911082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268037bdcc14c4719bcfe7d78e9ffd98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changer: {fileID: 57805995}
-  targetScene: Yon's Shop
 --- !u!114 &685911084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,6 +507,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 21300000, guid: b7f1a2007d4ff48258c19b2be07c81f8, type: 3}
   highlightedSprite: {fileID: 21300000, guid: c849285c3dc2345dda223a02c3bfa624, type: 3}
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 57805995}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ToNextScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Yon's Shop
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &685911085
 SpriteRenderer:
   m_ObjectHideFlags: 0

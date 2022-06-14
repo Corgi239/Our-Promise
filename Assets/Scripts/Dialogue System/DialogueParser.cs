@@ -27,12 +27,19 @@ namespace Dialogue_System
             ResetGraph();
             DisableUI();
             _state = Instantiate(stateTemplate);
-            StartDialogue();
         }
 
-        public void StartDialogue()
+        public void StartDialogue(float delay=0f)
         {
             _parser = StartCoroutine(ParseNode());
+        }
+
+        public void StopDialogue()
+        {
+            if (!_parser.IsUnityNull()) {
+                StopCoroutine(_parser);
+            }
+            DisableUI();
         }
 
         private IEnumerator ParseNode()

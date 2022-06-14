@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 1996482931}
   - component: {fileID: 1996482930}
   - component: {fileID: 1996482929}
+  - component: {fileID: 2062724874}
   m_Layer: 0
   m_Name: FancyTransition
   m_TagString: Untagged
@@ -391,6 +392,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2062724874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996482927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278fa6444364a410fa23e3d1a8e09da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8267940389395757036
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,3 +663,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1996482929}
   transitionTime: 0.7
+  transitionComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Dialogue_System.DialogueParser, Assembly-CSharp
+        m_MethodName: StartDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
