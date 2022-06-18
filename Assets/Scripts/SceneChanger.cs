@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameData.GameDataScripts;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -21,12 +22,14 @@ public class SceneChanger : MonoBehaviour
     public void ToNextScene(string targetScene)
     {
         transitionStarted.Invoke();
+        //AudioManager.instance.StopMusic();
         StartCoroutine(LoadSceneWithTransition(targetScene));
     }
     
     public void Awake()
     {
         transition.speed = 1 / transitionTime;
+        AudioManager.instance.PlaySceneTheme();
     }
 
     private IEnumerator LoadSceneWithTransition(string targetScene)
