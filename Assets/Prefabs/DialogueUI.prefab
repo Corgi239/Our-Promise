@@ -152,10 +152,11 @@ MonoBehaviour:
   language: 1
   graph: {fileID: 11400000, guid: 03309d1f7aee5b24baab9cd7e9dfbefe, type: 2}
   stateTemplate: {fileID: 11400000, guid: cf5061abf05ad4d978fe8aa353c6f8a2, type: 2}
-  speakerNameText: {fileID: 6967893699294207090}
-  narrationLineText: {fileID: 6967893698923932087}
-  speakerImage: {fileID: 6967893698129949270}
-  backsplash: {fileID: 6967893698649846596}
+  InterfaceElements:
+    speakerNameText: {fileID: 6967893699294207090}
+    narrationLineText: {fileID: 6967893698923932087}
+    speakerImage: {fileID: 6967893698129949270}
+    backsplash: {fileID: 6967893698649846596}
 --- !u!1 &6967893698129949273
 GameObject:
   m_ObjectHideFlags: 0

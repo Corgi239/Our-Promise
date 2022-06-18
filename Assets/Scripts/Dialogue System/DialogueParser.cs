@@ -13,13 +13,14 @@ namespace Dialogue_System
 {
     public class DialogueParser : MonoBehaviour
     {
-        [SerializeField] private Language language;
         [SerializeField] private DialogueGraph graph;
+        [SerializeField] private Language language;
         [SerializeField] private NarrativeState stateTemplate;
-        public TextMeshProUGUI speakerNameText;
-        public TextMeshProUGUI narrationLineText;
-        public Image speakerImage;
-        public Image backsplash;
+        [SerializeField] private InterfaceElements InterfaceElements;
+        // public TextMeshProUGUI speakerNameText;
+        // public TextMeshProUGUI narrationLineText;
+        // public Image speakerImage;
+        // public Image backsplash;
         private Coroutine _parser;
         private NarrativeState _state;
         public void Start()
@@ -56,18 +57,18 @@ namespace Dialogue_System
                     DisableUI();
                     yield break;
                 case "NarrationLineNode":
-                    speakerNameText.text = data[1];
-                    narrationLineText.text = data[2];
-                    speakerImage.sprite = currentNode.GetSprite();
+                    InterfaceElements.speakerNameText.text = data[1];
+                    InterfaceElements.narrationLineText.text = data[2];
+                    InterfaceElements.speakerImage.sprite = currentNode.GetSprite();
                     yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
                     yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
                     ToNextNode("exit");
                     break;
                 case "ChoiceNode":
-                    speakerNameText.text = data[1];
-                    speakerImage.sprite = currentNode.GetSprite();
+                    InterfaceElements.speakerNameText.text = data[1];
+                    InterfaceElements.speakerImage.sprite = currentNode.GetSprite();
                     var replies = data.Skip(2).ToArray();
-                    narrationLineText.text = replies.Select((value, index) => new {value, index})
+                    InterfaceElements.narrationLineText.text = replies.Select((value, index) => new {value, index})
                         .Aggregate("", (current, reply) => $"{current} [{reply.index + 1}] {reply.value}" + '\n');
                     int nextPortNumber = -1;
                     while (nextPortNumber == -1) {
@@ -128,19 +129,28 @@ namespace Dialogue_System
 
         private void DisableUI()
         {
-            speakerNameText.enabled = false;
-            narrationLineText.enabled = false;
-            speakerImage.enabled = false;
-            backsplash.enabled = false;
+            InterfaceElements.speakerNameText.enabled = false;
+            InterfaceElements.narrationLineText.enabled = false;
+            InterfaceElements.speakerImage.enabled = false;
+            InterfaceElements.backsplash.enabled = false;
         }
 
         private void EnableUI()
         {
-            speakerNameText.enabled = true;
-            narrationLineText.enabled = true;
-            speakerImage.enabled = true;
-            backsplash.enabled = true;
+            InterfaceElements.speakerNameText.enabled = true;
+            InterfaceElements.narrationLineText.enabled = true;
+            InterfaceElements.speakerImage.enabled = true;
+            InterfaceElements.backsplash.enabled = true;
         }
 
+    }
+
+    [Serializable]
+    sealed class InterfaceElements
+    {
+        public TextMeshProUGUI speakerNameText;
+        public TextMeshProUGUI narrationLineText;
+        public Image speakerImage;
+        public Image backsplash;
     }
 }
