@@ -31,6 +31,7 @@ namespace Dialogue_System
 
         public void StartDialogue(float delay=0f)
         {
+            ResetGraph();
             _parser = StartCoroutine(ParseNode());
         }
 

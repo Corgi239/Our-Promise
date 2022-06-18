@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: Fact
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: 56}
+  position: {x: 584, y: 56}
   ports:
     keys:
     - entry
@@ -72,8 +72,8 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: replies 1
-        node: {fileID: -1618558997493966495}
+      - fieldName: exit
+        node: {fileID: 831855878384140274}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: Condition
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 968, y: 72}
+  position: {x: 1288, y: 72}
   ports:
     keys:
     - entry
@@ -257,7 +257,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 6497918477825235041}
+        node: {fileID: -2102848086520644049}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -269,16 +269,16 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 3689024509499210838}
+        node: {fileID: -2340077359728920086}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
   replies:
-  - actionENG: 
+  - actionENG: I will think about your offer
     actionRUS: 
-  - actionENG: 
+  - actionENG: Fuck off
     actionRUS: 
   speakerENG: Yon
   speakerRUS: "\u0419\u043E\u043D"
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1288, y: 232}
+  position: {x: 1608, y: 232}
   ports:
     keys:
     - entry
@@ -436,7 +436,8 @@ MonoBehaviour:
       _dynamic: 0
   speakerENG: Banker
   speakerRUS: 
-  lineENG: We will be taking our leave now. It was a please to meet you, Mister Yon.
+  lineENG: We will be taking our leave now. It was a pleasure to meet you, Mister
+    Yon.
   lineRUS: 
   sprite: {fileID: 0}
 --- !u!114 &-2476803028934261008
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 536, y: 248}
+  position: {x: 856, y: 248}
   ports:
     keys:
     - entry
@@ -464,10 +465,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 3689024509499210838}
+        node: {fileID: -8669511720901833239}
         reroutePoints: []
       - fieldName: exit
-        node: {fileID: -8669511720901833239}
+        node: {fileID: 3689024509499210838}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -489,6 +490,109 @@ MonoBehaviour:
   speakerRUS: 
   lineENG: Very well, Mister Yon. I suppose we will be meeting with the next owner
     of this place soon enough...
+  lineRUS: 
+  sprite: {fileID: 0}
+--- !u!114 &-2340077359728920086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: 552}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -2340077359728920086}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: replies 1
+        node: {fileID: -6136696306704237099}
+        reroutePoints: []
+      - fieldName: replies 2
+        node: {fileID: -1618558997493966495}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -2340077359728920086}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3689024509499210838}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: Yon
+  speakerRUS: 
+  lineENG: Kindly, fuck off with your condecending tone. I have no need of your coin.
+  lineRUS: 
+  sprite: {fileID: 0}
+--- !u!114 &-2102848086520644049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -200}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -2102848086520644049}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: replies 0
+        node: {fileID: -6136696306704237099}
+        reroutePoints: []
+      - fieldName: replies 0
+        node: {fileID: -1618558997493966495}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -2102848086520644049}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6497918477825235041}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: Yon
+  speakerRUS: 
+  lineENG: It's hard to argue with facts, I'm barely scraping by. I will consider
+    your offer.
   lineRUS: 
   sprite: {fileID: 0}
 --- !u!114 &-1618558997493966495
@@ -541,7 +645,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 6497918477825235041}
+        node: {fileID: -2102848086520644049}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -553,7 +657,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: -8669511720901833239}
+        node: {fileID: 831855878384140274}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -565,18 +669,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 3689024509499210838}
+        node: {fileID: -2340077359728920086}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
   replies:
-  - actionENG: 
+  - actionENG: I will think about it
     actionRUS: 
-  - actionENG: 
+  - actionENG: Already have enough coin
     actionRUS: 
-  - actionENG: 
+  - actionENG: Fuck off
     actionRUS: 
   speakerENG: Yon
   speakerRUS: "\u0419\u043E\u043D"
@@ -663,7 +767,59 @@ MonoBehaviour:
   - {fileID: 2085072493776819396}
   - {fileID: 6420238545915069575}
   - {fileID: -8987193833318179935}
+  - {fileID: -2102848086520644049}
+  - {fileID: 831855878384140274}
+  - {fileID: -2340077359728920086}
   current: {fileID: 2085072493776819396}
+--- !u!114 &831855878384140274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: 168}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 831855878384140274}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: replies 1
+        node: {fileID: -1618558997493966495}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 831855878384140274}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -8669511720901833239}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: Yon
+  speakerRUS: 
+  lineENG: I appreciate the offer, but I have enough coin to keep this place running.
+    I am not interested in loans.
+  lineRUS: 
+  sprite: {fileID: 0}
 --- !u!114 &1825301476952017889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +833,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 536, y: -152}
+  position: {x: 856, y: -152}
   ports:
     keys:
     - entry
@@ -755,7 +911,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1608, y: 88}
+  position: {x: 1928, y: 88}
   ports:
     keys:
     - entry
@@ -837,7 +993,7 @@ MonoBehaviour:
   m_Name: Fact
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: 264}
+  position: {x: 584, y: 264}
   ports:
     keys:
     - entry
@@ -848,11 +1004,8 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: replies 1
-        node: {fileID: -6136696306704237099}
-        reroutePoints: []
-      - fieldName: replies 2
-        node: {fileID: -1618558997493966495}
+      - fieldName: exit
+        node: {fileID: -2340077359728920086}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -888,7 +1041,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1288, y: -136}
+  position: {x: 1608, y: -136}
   ports:
     keys:
     - entry
@@ -966,7 +1119,7 @@ MonoBehaviour:
   m_Name: Fact
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -152}
+  position: {x: 584, y: -152}
   ports:
     keys:
     - entry
@@ -977,11 +1130,8 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: replies 0
-        node: {fileID: -6136696306704237099}
-        reroutePoints: []
-      - fieldName: replies 0
-        node: {fileID: -1618558997493966495}
+      - fieldName: exit
+        node: {fileID: -2102848086520644049}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
