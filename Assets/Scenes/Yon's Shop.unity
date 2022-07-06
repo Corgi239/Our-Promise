@@ -630,6 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 21300000, guid: 35ea6f72c325e49f399291d9e3f6a80e, type: 3}
   highlightedSprite: {fileID: 21300000, guid: c5f520c04da774ea1be8014c21008670, type: 3}
+  soundName: chair-on-wood
   OnPress:
     m_PersistentCalls:
       m_Calls:
@@ -913,6 +914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 21300000, guid: 02078bcdbde4c47cab0c0db7f297539a, type: 3}
   highlightedSprite: {fileID: 21300000, guid: c4424e73af877480ea77e00844e4f729, type: 3}
+  soundName: 
   OnPress:
     m_PersistentCalls:
       m_Calls:
