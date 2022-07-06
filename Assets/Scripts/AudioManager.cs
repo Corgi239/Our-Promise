@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using GameData.GameDataScripts;
 using JetBrains.Annotations;
 using UnityEngine.Audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = System.Random;
 
 public class AudioManager : MonoBehaviour
 {
@@ -55,6 +57,18 @@ public class AudioManager : MonoBehaviour
             return;
         }
         sound.source.Play();
+    }
+
+    public void PlayRandomSound(string soundName)
+    {
+        Sound[] soundOptions = Array.FindAll(_sounds, sound => Regex.IsMatch(sound.name, soundName + "-[0-9]+"));
+        if (soundOptions.Length == 0) {
+            Debug.LogWarning("No sounds with name matching " + soundName + " could be found!");
+            return;
+        }
+        int randomIndex = UnityEngine.Random.Range(0, soundOptions.Length - 1);
+        Sound randomSound = soundOptions[randomIndex];
+        randomSound.source.Play();
     }
 
     // Starts playing a new music theme is one exists.

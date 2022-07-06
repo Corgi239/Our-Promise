@@ -8,12 +8,14 @@ public class ButtonWithHighlight : MonoBehaviour
 {
     [SerializeField] private Sprite baseSprite;
     [SerializeField] private Sprite highlightedSprite;
+    [SerializeField] private string soundName;
     public UnityEvent OnPress;
     private SpriteRenderer _renderer;
 
     public void Awake()
     {
         _renderer = GetComponent<SpriteRenderer>();
+        OnPress.AddListener(delegate { AudioManager.instance.PlayRandomSound(soundName); });
     }
 
     public void OnMouseEnter()
