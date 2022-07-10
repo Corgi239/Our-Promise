@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +16,9 @@ public class ButtonWithHighlight : MonoBehaviour
     public void Awake()
     {
         _renderer = GetComponent<SpriteRenderer>();
-        OnPress.AddListener(delegate { AudioManager.instance.PlayRandomSound(soundName); });
+        if (soundName != "") {
+            OnPress.AddListener(delegate { AudioManager.instance.PlayRandomSound(soundName); });
+        }
     }
 
     public void OnMouseEnter()
