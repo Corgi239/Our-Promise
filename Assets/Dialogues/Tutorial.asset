@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5752, y: 40}
+  position: {x: 7416, y: -8}
   ports:
     keys:
     - entry
@@ -37,7 +37,57 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 9175879133319131059}
+        node: {fileID: 6499094227725389180}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  lineENG: 
+  lineRUS: "\u042F \u0434\u0430\u043B \u0435\u043C\u0443 \u0438\u043C\u044F, \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+    \u0443\u0436 \u0431\u043B\u0438\u0437\u043E\u043A \u043E\u043D \u043C\u043D\u0435
+    \u0441\u0442\u0430\u043B \u0437\u0430 \u044D\u0442\u0438 \u0433\u043E\u0434\u044B."
+  sprite: {fileID: 0}
+--- !u!114 &-9009468250420577163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 120, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -9009468250420577163}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -374739270450004591}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -9009468250420577163}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3968572952732180765}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -46,10 +96,7 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\u042F \u0433\u043B\u0443\u0431\u043E\u043A\u043E \u0432\u0437\u0434\u043E\u0445\u043D\u0443\u043B
-    \u0438 \u043F\u043E\u043A\u0430\u0447\u0430\u043B \u0433\u043E\u043B\u043E\u0432\u043E\u0439.
-    \"\u0427\u0435\u0440\u0442\u043E\u0432\u0441\u043A\u0438 \u0441\u0442\u0440\u0430\u043D\u043D\u044B\u0439
-    \u043C\u0443\u0436\u0438\u043A...\""
+  lineRUS: "\u0414\u043B\u044F \u043C\u0435\u043D\u044F?"
   sprite: {fileID: 0}
 --- !u!114 &-8910240494988609815
 MonoBehaviour:
@@ -64,7 +111,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1144, y: -88}
+  position: {x: 2488, y: -200}
   ports:
     keys:
     - entry
@@ -97,8 +144,58 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u0410, \u0434\u0430! \u0412\u044B \u043F\u0440\u0430\u0432\u044B,
-    \u0431\u0443\u0434\u0443 \u043A\u0440\u0430\u0442\u043E\u043A\"."
+  lineRUS: "\u0410, \u0434\u0430! \u0412\u044B \u043F\u0440\u0430\u0432\u044B, \u0431\u0443\u0434\u0443
+    \u043A\u0440\u0430\u0442\u043E\u043A."
+  sprite: {fileID: 0}
+--- !u!114 &-8777365524184362882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1400, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -8777365524184362882}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -4259361871774327323}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -8777365524184362882}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4174759389223199325}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: 
+  lineENG: 
+  lineRUS: "\u0420\u0443\u043A\u0430 \u0441\u0442\u0430\u0440\u0438\u043A\u0430 \u0443\u043A\u0430\u0437\u044B\u0432\u0430\u043B\u0430
+    \u043D\u0430 \u043B\u0435\u0436\u0430\u0449\u0438\u0439 \u043D\u0430 \u0441\u0442\u043E\u0439\u043A\u0435
+    \u0441\u0432\u0435\u0440\u0442\u043E\u043A."
   sprite: {fileID: 0}
 --- !u!114 &-8257708914156352101
 MonoBehaviour:
@@ -113,7 +210,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3704, y: 40}
+  position: {x: 5112, y: -8}
   ports:
     keys:
     - entry
@@ -137,7 +234,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 3842346363173287089}
+        node: {fileID: 6818798067155240797}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -146,12 +243,12 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\"\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u0441\u043E\u0439\u0434\u0435\u043C\u0441\u044F
+  lineRUS: "\u0414\u0430\u0432\u0430\u0439\u0442\u0435 \u0441\u043E\u0439\u0434\u0435\u043C\u0441\u044F
     \u043D\u0430 \u0437\u0430\u0432\u0442\u0440\u0430\u0448\u043D\u0435\u043C \u0432\u0435\u0447\u0435\u0440\u0435.
     \u0415\u0441\u043B\u0438 \u0437\u0430 \u044D\u0442\u043E \u0432\u0440\u0435\u043C\u044F
     \u044F \u043D\u0435 \u043F\u0440\u0438\u0434\u0443\u043C\u0430\u044E \u043A\u0430\u043A
     \u043F\u043E\u0447\u0438\u043D\u0438\u0442\u044C \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442
-    \u2014 \u0437\u043D\u0430\u0447\u0438\u0442, \u044F \u0431\u0435\u0441\u0441\u0438\u043B\u0435\u043D\"."
+    \u2014 \u0437\u043D\u0430\u0447\u0438\u0442, \u044F \u0431\u0435\u0441\u0441\u0438\u043B\u0435\u043D."
   sprite: {fileID: 0}
 --- !u!114 &-8194323826212357787
 MonoBehaviour:
@@ -196,7 +293,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 376, y: -72}
+  position: {x: 1912, y: -72}
   ports:
     keys:
     - entry
@@ -210,7 +307,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -374739270450004591}
+        node: {fileID: -4174759389223199325}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -271,7 +368,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3448, y: 40}
+  position: {x: 4856, y: -8}
   ports:
     keys:
     - entry
@@ -304,9 +401,8 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u0412 \u0442\u0430\u043A\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435...
-    \u043A\u043E\u0433\u0434\u0430 \u043C\u043D\u0435 \u0437\u0430\u0439\u0442\u0438
-    \u043A \u0432\u0430\u043C \u0432\u043D\u043E\u0432\u044C?\""
+  lineRUS: "\u041E\u0442\u043B\u0438\u0447\u043D\u043E! \u041A\u043E\u0433\u0434\u0430
+    \u043C\u043D\u0435 \u0437\u0430\u0439\u0442\u0438 \u043A \u0432\u0430\u043C \u0432\u043D\u043E\u0432\u044C?"
   sprite: {fileID: 0}
 --- !u!114 &-4934225491163956799
 MonoBehaviour:
@@ -321,7 +417,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4984, y: 40}
+  position: {x: 6648, y: -8}
   ports:
     keys:
     - entry
@@ -352,10 +448,65 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerENG: 
-  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  speakerRUS: 
   lineENG: 
-  lineRUS: "\"\u041E\u0447\u0435\u043D\u044C \u043F\u0440\u0438\u044F\u0442\u043D\u043E
-    \u043F\u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C\u0441\u044F!\""
+  lineRUS: "\u042F \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E \u043D\u0435
+    \u043F\u043E\u043D\u0438\u043C\u0430\u043B \u043A\u0442\u043E \u044D\u0442\u043E,
+    \u0445\u043E\u0442\u044F \u043C\u0443\u0436\u0447\u0438\u043D\u0430 \u0441\u043A\u0430\u0437\u0430\u043B
+    \u043E\u0431 \u044D\u0442\u043E\u043C \u0442\u0430\u043A, \u0431\u0443\u0434\u0442\u043E
+    \u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043E\u043B\u0436\u0435\u043D
+    \u0431\u044B\u043B \u0435\u0433\u043E \u043F\u043E\u043D\u044F\u0442\u044C."
+  sprite: {fileID: 0}
+--- !u!114 &-4728601810025219927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8696, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4728601810025219927}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6294044752236472468}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4728601810025219927}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -1084377583673226927}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: 
+  lineENG: 
+  lineRUS: "\u0421\u0442\u0430\u0440\u0438\u043A \u043A\u0438\u0432\u043D\u0443\u043B
+    \u043D\u0430 \u043F\u0440\u043E\u0449\u0430\u043D\u0438\u0435, \u0430 \u0437\u0430\u0442\u0435\u043C
+    \u043D\u0435\u043E\u0436\u0438\u0434\u0430\u043D\u043D\u043E \u0431\u044B\u0441\u0442\u0440\u044B\u043C
+    \u0448\u0430\u0433\u043E\u043C \u0432\u044B\u0448\u0435\u043B \u0438\u0437 \u043B\u0430\u0432\u043A\u0438."
   sprite: {fileID: 0}
 --- !u!114 &-4635841530481987747
 MonoBehaviour:
@@ -370,7 +521,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1928, y: 40}
+  position: {x: 3320, y: -8}
   ports:
     keys:
     - entry
@@ -406,7 +557,7 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u0415\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u0438\u0433\u043B\u044F\u0434\u0438\u0442\u0435\u0441\u044C
+  lineRUS: "\u0415\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u0438\u0433\u043B\u044F\u0434\u0438\u0442\u0435\u0441\u044C
     \u043A \u0432\u0435\u0440\u0445\u043D\u0435\u0439 \u0447\u0430\u0441\u0442\u0438
     \u0440\u0438\u0441\u0443\u043D\u043A\u0430, \u0442\u043E \u0437\u0430\u043C\u0435\u0442\u0438\u0442\u0435
     \u0440\u0443\u043D\u044B. \u041D\u0435 \u0442\u0430\u043A \u0434\u0430\u0432\u043D\u043E
@@ -414,13 +565,12 @@ MonoBehaviour:
     \u0438\u0445. \u042D\u0442\u0430 \u043D\u0430\u0434\u043F\u0438\u0441\u044C \u0433\u043B\u0430\u0441\u0438\u0442:
     \"\u0421\u0432\u0435\u0442 \u043D\u0435\u0441\u0435\u0442 \u0431\u043B\u0430\u0433\u043E,
     \u0437\u0430 \u0442\u044C\u043C\u043E\u0439 \u0441\u043B\u0435\u0434\u0443\u0435\u0442
-    \u0432\u0440\u0435\u0434. \u041B\u044E\u0431\u043E\u0439, \u043A\u0442\u043E
-    \u0432\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F
-    \u043C\u043D\u043E\u0439, \u043E\u0449\u0443\u0442\u0438\u0442 \u044D\u0442\u043E
-    \u043D\u0430 \u0441\u0435\u0431\u0435\". \u041E\u0447\u0435\u0432\u0438\u0434\u043D\u043E,
+    \u0432\u0440\u0435\u0434. \u0412\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0441\u044F
+    \u043C\u043D\u043E\u0439 \u0438 \u043D\u0430\u0439\u0434\u0438 \u0442\u0430\u0439\u043D\u044B
+    \u043E\u0442\u0432\u0435\u0442\". \u041E\u0447\u0435\u0432\u0438\u0434\u043D\u043E,
     \u0447\u0442\u043E \u044D\u0442\u043E \u043A\u0430\u043A\u0430\u044F-\u0442\u043E
     \u0437\u0430\u0433\u0430\u0434\u043A\u0430, \u0441\u0432\u044F\u0437\u0430\u043D\u043D\u0430\u044F
-    \u0441 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E\u043C\"."
+    \u0441 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E\u043C."
   sprite: {fileID: 0}
 --- !u!114 &-4561532176017392639
 MonoBehaviour:
@@ -435,7 +585,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4472, y: 40}
+  position: {x: 6136, y: -8}
   ports:
     keys:
     - entry
@@ -468,13 +618,119 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u041E, \u044D\u0442\u043E \u0435\u0433\u043E \u0442\u0430\u043A \u0437\u043E\u0432\u0443\u0442\".
-    \u041E\u043D \u043F\u043E\u0441\u0442\u0443\u0447\u0430\u043B \u043F\u0430\u043B\u044C\u0446\u0435\u043C
-    \u043F\u043E \u043F\u0440\u0438\u043B\u0430\u0432\u043A\u0443 \u0440\u044F\u0434\u043E\u043C
-    \u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442\u043E\u043C. \"\u042D\u0442\u043E
-    \u044F \u0434\u0430\u043B \u0435\u043C\u0443 \u0438\u043C\u044F, \u0441\u043B\u0438\u0448\u043A\u043E\u043C
-    \u0443\u0436 \u0431\u043B\u0438\u0437\u043E\u043A \u043E\u043D \u043C\u043D\u0435
-    \u0441\u0442\u0430\u043B \u0437\u0430 \u044D\u0442\u0438 \u0433\u043E\u0434\u044B\"."
+  lineRUS: "\u0422\u0430\u043A \u0437\u0430\u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0441\u044F,
+    \u0447\u0442\u043E \u043F\u043E\u0437\u0430\u0431\u044B\u043B \u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C
+    \u0432\u0430\u0448\u0435 \u0438\u043C\u044F. \u0410 \u0432\u0435\u0434\u044C
+    \u0434\u0430\u0436\u0435 \u0443 \u0413\u0435\u043D\u0440\u0438 \u043E\u043D\u043E
+    \u0435\u0441\u0442\u044C."
+  sprite: {fileID: 0}
+--- !u!114 &-4259361871774327323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1144, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4259361871774327323}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 1441331616883730724}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4259361871774327323}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -8777365524184362882}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  lineENG: 
+  lineRUS: "\u041C\u043E\u0435 \u0438\u043C\u044F \u2014 \u0425\u044D\u0432\u0430\u0440\u0434,
+    \u044F \u0443\u0447\u0435\u043D\u044B\u0439 \u0438\u0437 \u043C\u0435\u0441\u0442\u043D\u043E\u0439
+    \u043C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0430\u043A\u0430\u0434\u0435\u043C\u0438\u0438.
+    \u042F \u0434\u0430\u0432\u043D\u043E \u0438\u0437\u0443\u0447\u0430\u044E \u044D\u0442\u043E\u0442
+    \u0441\u0442\u0430\u0440\u0438\u043D\u043D\u044B\u0439 \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442."
+  sprite: {fileID: 0}
+--- !u!114 &-4174759389223199325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1656, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4174759389223199325}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -8777365524184362882}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -4174759389223199325}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -7889752968610370953}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  lineENG: 
+  lineRUS: "\u0423\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u043E \u043D\u0435\u043C
+    \u0441\u0430\u043C\u043E\u043C \u0438 \u043E \u0442\u043E\u043C, \u043A\u0430\u043A
+    \u043E\u043D \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043B\u0441\u044F,
+    \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0441\u044C \u043B\u0438\u0448\u044C
+    \u0432 \u044D\u0442\u043E\u043C \u0442\u0440\u0430\u043A\u0442\u0430\u0442\u0435,
+    \u0443\u0445\u043E\u0434\u044F\u0449\u0438\u043C \u043A\u043E\u0440\u043D\u044F\u043C\u0438
+    \u0435\u0449\u0435 \u043A \u0441\u0430\u043C\u043E\u043C\u0443 \u043A\u043E\u0440\u043E\u043B\u044E
+    \u0412\u0438\u043A\u0442\u043E\u0440\u0443 \u0411\u0430\u0433\u0440\u044F\u043D\u043E\u0439
+    \u0434\u043B\u0430\u043D\u0438!"
   sprite: {fileID: 0}
 --- !u!114 &-3515843858404038143
 MonoBehaviour:
@@ -489,7 +745,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3192, y: 40}
+  position: {x: 4600, y: -8}
   ports:
     keys:
     - entry
@@ -522,13 +778,13 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\"\u041B\u0430\u0434\u043D\u043E, \u0431\u0443\u0434\u044C \u043F\u043E-\u0432\u0430\u0448\u0435\u043C\u0443\".
-    \u042F \u0443\u0441\u043C\u0435\u0445\u043D\u0443\u043B\u0441\u044F. \"\u0411\u044B\u043B\u043E
-    \u0431\u044B \u0441\u0442\u0440\u0430\u043D\u043D\u043E \u043E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C\u0441\u044F
-    \u043E\u0442 \u0441\u0432\u043E\u0435\u0433\u043E \u043F\u0435\u0440\u0432\u043E\u0433\u043E
+  lineRUS: "\u041B\u0430\u0434\u043D\u043E, \u0431\u0443\u0434\u044C \u043F\u043E-\u0432\u0430\u0448\u0435\u043C\u0443.
+    \u0411\u044B\u043B\u043E \u0431\u044B \u0441\u0442\u0440\u0430\u043D\u043D\u043E
+    \u043E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C\u0441\u044F \u043E\u0442
+    \u0441\u0432\u043E\u0435\u0433\u043E \u043F\u0435\u0440\u0432\u043E\u0433\u043E
     \u0437\u0430\u043A\u0430\u0437\u0430. \u041C\u043D\u0435 \u0438 \u0441\u0430\u043C\u043E\u043C\u0443
     \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E, \u0447\u0442\u043E \u0438\u0437
-    \u044D\u0442\u043E\u0433\u043E \u0432\u0441\u0435\u0433\u043E \u0432\u044B\u0439\u0434\u0435\u0442\"."
+    \u044D\u0442\u043E\u0433\u043E \u0432\u0441\u0435\u0433\u043E \u0432\u044B\u0439\u0434\u0435\u0442."
   sprite: {fileID: 0}
 --- !u!114 &-2861819178202868119
 MonoBehaviour:
@@ -543,7 +799,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -648, y: -72}
+  position: {x: -904, y: -72}
   ports:
     keys:
     - entry
@@ -555,7 +811,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 3879183451749904669}
+        node: {fileID: 2332303273378613211}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -576,10 +832,8 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\"\u0414\u043B\u044F \u043C\u0435\u043D\u044F?\" \u042F \u043D\u0430\u0434\u0435\u044F\u043B\u0441\u044F,
-    \u0447\u0442\u043E \u043C\u043E\u0435 \u043B\u0438\u0446\u043E \u0432\u044B\u0440\u0430\u0436\u0430\u043B\u043E
-    \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0438\u0435 \u043D\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
-    \u0443\u0436 \u044F\u0432\u043D\u043E."
+  lineRUS: "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435,
+    \u0432\u044B \u0447\u0442\u043E-\u0442\u043E \u0445\u043E\u0442\u0435\u043B\u0438?"
   sprite: {fileID: 0}
 --- !u!114 &-2537298400040293810
 MonoBehaviour:
@@ -594,7 +848,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1144, y: 280}
+  position: {x: 2488, y: 136}
   ports:
     keys:
     - entry
@@ -627,17 +881,19 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u0415\u0441\u043B\u0438 \u0432\u0435\u0440\u0438\u0442\u044C \u0442\u043E\u043C\u0443,
-    \u0447\u0442\u043E \u0432 \u043D\u0435\u043C \u0441\u043A\u0430\u0437\u0430\u043D\u043E,
-    \u044D\u0442\u0430 \u0432\u0435\u0449\u044C \u0438\u043C\u0435\u043B\u0430 \u043E\u0441\u043E\u0431\u043E\u0435
-    \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u0437\u0430\u043A\u043B\u0438\u043D\u0430\u0442\u0435\u043B\u0435\u0439
+  lineRUS: "\u041D\u043E \u0432\u0435\u0440\u043D\u0435\u043C\u0441\u044F \u043A
+    \u043C\u0430\u043D\u0443\u0441\u043A\u0440\u0438\u043F\u0442\u0443! \u0415\u0441\u043B\u0438
+    \u0432\u0435\u0440\u0438\u0442\u044C \u0442\u043E\u043C\u0443, \u0447\u0442\u043E
+    \u0432 \u043D\u0435\u043C \u0441\u043A\u0430\u0437\u0430\u043D\u043E, \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442
+    \u0438\u043C\u0435\u043B \u043E\u0441\u043E\u0431\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435
+    \u0434\u043B\u044F \u0437\u0430\u043A\u043B\u0438\u043D\u0430\u0442\u0435\u043B\u0435\u0439
     \u0438 \u044E\u0432\u0435\u043B\u0438\u0440\u043E\u0432 \u0442\u0435\u0445 \u043B\u0435\u0442.
     \u042F \u0441\u043C\u043E\u0433 \u0432\u044B\u044F\u0441\u043D\u0438\u0442\u044C,
     \u0447\u0442\u043E \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E
     \u0431\u044B\u043B\u043E \u0441\u0432\u044F\u0437\u0430\u043D\u043E \u0441 \u043F\u0441\u0438\u0445\u043E\u0444\u0438\u0437\u0438\u043E\u043B\u043E\u0433\u0438\u0435\u0439
     \u043D\u043E\u0441\u0438\u0442\u0435\u043B\u044F \u0438 \u043C\u043E\u0433\u043B\u043E
     \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E \u0432\u043B\u0438\u044F\u0442\u044C
-    \u043D\u0430 \u043D\u0435\u0435\"."
+    \u043D\u0430 \u043D\u0435\u0435."
   sprite: {fileID: 0}
 --- !u!114 &-2487565239407847876
 MonoBehaviour:
@@ -652,7 +908,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1656, y: 280}
+  position: {x: 3000, y: 136}
   ports:
     keys:
     - entry
@@ -693,6 +949,55 @@ MonoBehaviour:
     \u0434\u0435\u043B\u0435 \u043E\u043A\u0430\u0437\u0430\u0432\u0448\u0438\u0439\u0441\u044F
     \u0446\u0435\u043B\u044B\u043C \u043F\u0435\u0440\u0433\u0430\u043C\u0435\u043D\u0442\u043E\u043C."
   sprite: {fileID: 0}
+--- !u!114 &-1084377583673226927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8952, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1084377583673226927}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -4728601810025219927}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1084377583673226927}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 2899649547800787914}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: 
+  lineENG: 
+  lineRUS: "\u042F \u0433\u043B\u0443\u0431\u043E\u043A\u043E \u0432\u0437\u0434\u043E\u0445\u043D\u0443\u043B
+    \u0438 \u043F\u043E\u043A\u0430\u0447\u0430\u043B \u0433\u043E\u043B\u043E\u0432\u043E\u0439."
+  sprite: {fileID: 0}
 --- !u!114 &-374739270450004591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,7 +1011,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 120, y: -72}
+  position: {x: -136, y: -72}
   ports:
     keys:
     - entry
@@ -730,17 +1035,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: -7889752968610370953}
+        node: {fileID: -9009468250420577163}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   speakerENG: 
-  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  speakerRUS: "\u041F\u043E\u0441\u0435\u0442\u0438\u0442\u0435\u043B\u044C"
   lineENG: 
-  lineRUS: "\"\u041C\u043E\u0435 \u0438\u043C\u044F \u2014 \u0425\u044D\u0432\u0430\u0440\u0434,
-    \u044F...\""
+  lineRUS: "\u0414\u0435\u043D\u044C \u0434\u043E\u0431\u0440\u044B\u0439! \u0423
+    \u043C\u0435\u043D\u044F \u043A\u043E\u0435-\u0447\u0442\u043E \u0435\u0441\u0442\u044C
+    \u0434\u043B\u044F \u0432\u0430\u0441."
   sprite: {fileID: 0}
 --- !u!114 &-287738645651021474
 MonoBehaviour:
@@ -755,7 +1061,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -392, y: -72}
+  position: {x: -648, y: -72}
   ports:
     keys:
     - entry
@@ -788,7 +1094,7 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u041F\u043E\u0441\u0435\u0442\u0438\u0442\u0435\u043B\u044C"
   lineENG: 
-  lineRUS: "\"\u0414\u0430-\u0434\u0430, \u0434\u043B\u044F \u0432\u0430\u0441\"."
+  lineRUS: "\u0410!"
   sprite: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -806,7 +1112,6 @@ MonoBehaviour:
   - {fileID: -8194323826212357787}
   - {fileID: 9040746185827927582}
   - {fileID: 2332303273378613211}
-  - {fileID: 3879183451749904669}
   - {fileID: -2861819178202868119}
   - {fileID: -287738645651021474}
   - {fileID: 6433176122725255825}
@@ -837,7 +1142,22 @@ MonoBehaviour:
   - {fileID: 3066011699259474750}
   - {fileID: -9070160040973219558}
   - {fileID: 9175879133319131059}
-  current: {fileID: -7889752968610370953}
+  - {fileID: -9009468250420577163}
+  - {fileID: 3968572952732180765}
+  - {fileID: 6227548571381735496}
+  - {fileID: 1441331616883730724}
+  - {fileID: -4259361871774327323}
+  - {fileID: -8777365524184362882}
+  - {fileID: -4174759389223199325}
+  - {fileID: 8424342656258465008}
+  - {fileID: 1937321888826116483}
+  - {fileID: 6294044752236472468}
+  - {fileID: -4728601810025219927}
+  - {fileID: -1084377583673226927}
+  - {fileID: 2899649547800787914}
+  - {fileID: 6499094227725389180}
+  - {fileID: 6818798067155240797}
+  current: {fileID: -8194323826212357787}
 --- !u!114 &731365389218214124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,7 +1171,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4216, y: 40}
+  position: {x: 5880, y: -8}
   ports:
     keys:
     - entry
@@ -882,14 +1202,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerENG: 
-  speakerRUS: "\u0419\u043E\u043D"
+  speakerRUS: 
   lineENG: 
-  lineRUS: "\"\u0413\u0435\u043D\u0440\u0438?\" \u042F \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E
-    \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u043B \u043A\u0442\u043E \u044D\u0442\u043E,
-    \u0445\u043E\u0442\u044F \u043C\u0443\u0436\u0447\u0438\u043D\u0430 \u0441\u043A\u0430\u0437\u0430\u043B
-    \u043E\u0431 \u044D\u0442\u043E\u043C \u0442\u0430\u043A, \u0431\u0443\u0434\u0442\u043E
-    \u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043E\u043B\u0436\u0435\u043D
-    \u0431\u044B\u043B \u0435\u0433\u043E \u043F\u043E\u043D\u044F\u0442\u044C."
+  lineRUS: "\u0421\u0442\u0430\u0440\u0438\u043A \u0445\u043B\u043E\u043F\u043D\u0443\u043B
+    \u0441\u0435\u0431\u044F \u043F\u043E \u043B\u0431\u0443."
   sprite: {fileID: 0}
 --- !u!114 &1262164561328137181
 MonoBehaviour:
@@ -904,7 +1220,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1656, y: -88}
+  position: {x: 3000, y: -200}
   ports:
     keys:
     - entry
@@ -935,12 +1251,113 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   speakerENG: 
-  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  speakerRUS: 
   lineENG: 
-  lineRUS: "\"\u041F\u043E\u0437\u0432\u043E\u043B\u044C\u0442\u0435, \u044F \u043F\u043E\u043A\u0430\u0436\u0443
-    \u0432\u0430\u043C\". \u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u0441\u0442\u0430\u043B
+  lineRUS: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u043D\u0430\u0447\u0430\u043B
     \u0440\u0430\u0437\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044C
     \u0437\u0430\u043F\u0438\u0441\u043A\u0443."
+  sprite: {fileID: 0}
+--- !u!114 &1441331616883730724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 888, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1441331616883730724}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6227548571381735496}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 1441331616883730724}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4259361871774327323}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: 
+  lineENG: 
+  lineRUS: "\u0421\u0442\u0430\u0440\u0438\u043A \u043F\u043E\u0434\u043E\u0448\u0435\u043B
+    \u043A \u043F\u0440\u0438\u043B\u0430\u0432\u043A\u0443 \u0438 \u0434\u043E\u0441\u0442\u0430\u043B
+    \u0438\u0437 \u043A\u0430\u0440\u043C\u0430\u043D\u0430 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E
+    \u0441\u0432\u0435\u0440\u0442\u043E\u043A \u0438 \u0441\u043B\u043E\u0436\u0435\u043D\u043D\u044B\u0439
+    \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0440\u0430\u0437
+    \u043A\u0443\u0441\u043E\u0447\u0435\u043A \u0431\u0443\u043C\u0430\u0433\u0438."
+  sprite: {fileID: 0}
+--- !u!114 &1937321888826116483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8184, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1937321888826116483}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 8424342656258465008}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 1937321888826116483}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6294044752236472468}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  lineENG: 
+  lineRUS: "\u041E\u0447\u0435\u043D\u044C \u043F\u0440\u0438\u044F\u0442\u043D\u043E
+    \u043F\u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C\u0441\u044F!"
   sprite: {fileID: 0}
 --- !u!114 &2332303273378613211
 MonoBehaviour:
@@ -979,19 +1396,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: 3879183451749904669}
+        node: {fileID: -2861819178202868119}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   speakerENG: 
-  speakerRUS: "\u0419\u043E\u043D"
+  speakerRUS: 
   lineENG: 
-  lineRUS: "\u041D\u0430\u0440\u0443\u0448\u0438\u0432 \u0437\u0430\u0442\u044F\u043D\u0443\u0432\u0448\u0443\u044E\u0441\u044F
-    \u0442\u0438\u0448\u0438\u043D\u0443, \u044F \u043E\u0431\u0440\u0430\u0442\u0438\u043B\u0441\u044F
-    \u043A \u043D\u0435\u043C\u0443. \"\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435,
-    \u0432\u044B \u0447\u0442\u043E-\u0442\u043E \u0445\u043E\u0442\u0435\u043B\u0438?\""
+  lineRUS: "\u042F \u043D\u0430\u0440\u0443\u0448\u0438\u043B \u0437\u0430\u0442\u044F\u043D\u0443\u0432\u0448\u0443\u044E\u0441\u044F
+    \u0442\u0438\u0448\u0438\u043D\u0443 \u0438 \u043E\u0431\u0440\u0430\u0442\u0438\u043B\u0441\u044F
+    \u043A \u043D\u0435\u043C\u0443."
   sprite: {fileID: 0}
 --- !u!114 &2389528846963101411
 MonoBehaviour:
@@ -1006,7 +1422,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 888, y: -88}
+  position: {x: 2232, y: -216}
   ports:
     keys:
     - entry
@@ -1039,13 +1455,14 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\"\u042F \u043D\u0443\u0442\u0440\u043E\u043C \u0447\u0443\u044E, \u0447\u0442\u043E
-    \u0432\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u043F\u043E\u0432\u0435\u0434\u0430\u0442\u044C
-    \u043C\u043D\u0435 \u043A\u0430\u043A\u0443\u044E-\u0442\u043E \u0434\u043E\u043B\u0433\u0443\u044E
-    \u0438\u0441\u0442\u043E\u0440\u0438\u044E. \u041F\u0440\u043E\u0448\u0443 \u0432\u0430\u0441,
-    \u0438\u0437\u0431\u0430\u0432\u044C\u0442\u0435 \u043C\u0435\u043D\u044F \u043E\u0442
-    \u044D\u0442\u043E\u0433\u043E. \u041F\u0435\u0440\u0435\u0439\u0434\u0435\u043C
-    \u043A \u0434\u0435\u043B\u0443\"."
+  lineRUS: "\u041D\u0443\u0442\u0440\u043E\u043C \u0447\u0443\u044E, \u0447\u0442\u043E
+    \u0443 \u0432\u0430\u0441 \u043F\u0440\u0438\u043F\u0430\u0441\u0435\u043D\u0430
+    \u043D\u0435 \u043E\u0434\u043D\u0430 \u0437\u0430\u043D\u0438\u043C\u0430\u0442\u0435\u043B\u044C\u043D\u0430\u044F
+    \u0438\u0441\u0442\u043E\u0440\u0438\u044F. \u042D\u0442\u043E \u0437\u0430\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E,
+    \u043F\u0440\u0430\u0432\u0434\u0430. \u041D\u043E \u043F\u0440\u043E\u0448\u0443
+    \u0432\u0430\u0441, \u0438\u0437\u0431\u0430\u0432\u044C\u0442\u0435 \u043C\u0435\u043D\u044F
+    \u043E\u0442 \u044D\u0442\u043E\u0433\u043E. \u041F\u0435\u0440\u0435\u0439\u0434\u0435\u043C
+    \u043A \u0434\u0435\u043B\u0443."
   sprite: {fileID: 0}
 --- !u!114 &2619907264415332895
 MonoBehaviour:
@@ -1060,7 +1477,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2424, y: 40}
+  position: {x: 3832, y: -8}
   ports:
     keys:
     - entry
@@ -1093,7 +1510,7 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u041E, \u0441\u043A\u043E\u043B\u044C \u043C\u043D\u043E\u0433\u0438\u0445
+  lineRUS: "\u041E, \u0441\u043A\u043E\u043B\u044C \u043C\u043D\u043E\u0433\u0438\u0445
     \u044E\u0432\u0435\u043B\u0438\u0440\u043E\u0432 \u044F \u043E\u0431\u043E\u0448\u0435\u043B
     \u0432 \u043F\u043E\u043F\u044B\u0442\u043A\u0430\u0445 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C
     \u044D\u0442\u043E\u0442 \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442! \u041D\u043E
@@ -1101,10 +1518,13 @@ MonoBehaviour:
     \u0438 \u043D\u0435 \u0441\u043C\u043E\u0433 \u043F\u043E\u043D\u044F\u0442\u044C
     \u0447\u0442\u043E \u044D\u0442\u043E \u0437\u0430 \"\u0441\u0432\u0435\u0442\"
     \u0442\u0430\u043A\u043E\u0439 \u0438 \u0447\u0442\u043E \u044D\u0442\u043E \u0437\u0430
-    \"\u0442\u044C\u043C\u0430\". \u0415\u0441\u043B\u0438 \u0432\u044B \u0441\u043C\u043E\u0436\u0435\u0442\u0435
+    \"\u0442\u044C\u043C\u0430\". \u0415\u0441\u043B\u0438 \u0432\u0430\u043C \u0443\u0434\u0430\u0441\u0442\u0441\u044F
     \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u044D\u0442\u043E \u2014 \u0434\u0430\u044E
     \u0432\u0430\u043C \u0441\u043B\u043E\u0432\u043E \u2014 \u044F \u0449\u0435\u0434\u0440\u043E
-    \u0432\u043E\u0437\u043D\u0430\u0433\u0440\u0430\u0436\u0443 \u0432\u0430\u0441!\""
+    \u0432\u043E\u0437\u043D\u0430\u0433\u0440\u0430\u0436\u0443 \u0432\u0430\u0441!
+    \u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0434\u0430\u0436\u0435 \u0432\u043A\u043B\u044E\u0447\u0443
+    \u0432\u0430\u0448\u0435 \u0438\u043C\u044F \u0432 \u0441\u0432\u043E\u044E \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E
+    \u0441\u0442\u0430\u0442\u044C\u044E!"
   sprite: {fileID: 0}
 --- !u!114 &2697071281499309933
 MonoBehaviour:
@@ -1119,7 +1539,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2936, y: 40}
+  position: {x: 4344, y: -8}
   ports:
     keys:
     - entry
@@ -1152,9 +1572,58 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: 
   lineENG: 
-  lineRUS: "\u041D\u043E \u043B\u044E\u0431\u043E\u043F\u044B\u0442\u0441\u0442\u0432\u043E
-    \u0431\u044B\u0441\u0442\u0440\u043E \u043F\u043E\u0431\u0435\u0434\u0438\u043B\u043E
-    \u0441\u043E\u043C\u043D\u0435\u043D\u0438\u044F."
+  lineRUS: "\u041B\u044E\u0431\u043E\u043F\u044B\u0442\u0441\u0442\u0432\u043E \u0431\u044B\u0441\u0442\u0440\u043E
+    \u043F\u043E\u0431\u0435\u0434\u0438\u043B\u043E \u0441\u043E\u043C\u043D\u0435\u043D\u0438\u044F,
+    \u044F \u0443\u0441\u043C\u0435\u0445\u043D\u0443\u043B\u0441\u044F."
+  sprite: {fileID: 0}
+--- !u!114 &2899649547800787914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9208, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 2899649547800787914}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -1084377583673226927}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 2899649547800787914}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 9175879133319131059}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0419\u043E\u043D"
+  lineENG: 
+  lineRUS: "\u0427\u0435\u0440\u0442\u043E\u0432\u0441\u043A\u0438 \u0441\u0442\u0440\u0430\u043D\u043D\u044B\u0439
+    \u043C\u0443\u0436\u0438\u043A..."
   sprite: {fileID: 0}
 --- !u!114 &3066011699259474750
 MonoBehaviour:
@@ -1169,7 +1638,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5496, y: 40}
+  position: {x: 7160, y: -8}
   ports:
     keys:
     - entry
@@ -1202,10 +1671,9 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: 
   lineENG: 
-  lineRUS: "\u0421\u0442\u0430\u0440\u0438\u043A \u043A\u0438\u0432\u043D\u0443\u043B
-    \u043D\u0430 \u043F\u0440\u043E\u0449\u0430\u043D\u0438\u0435, \u0430 \u0437\u0430\u0442\u0435\u043C
-    \u043D\u0435\u043E\u0436\u0438\u0434\u0430\u043D\u043D\u043E \u0431\u044B\u0441\u0442\u0440\u044B\u043C
-    \u0448\u0430\u0433\u043E\u043C \u0432\u044B\u0448\u0435\u043B \u0438\u0437 \u043B\u0430\u0432\u043A\u0438."
+  lineRUS: "\u041E\u043D \u043F\u043E\u0441\u0442\u0443\u0447\u0430\u043B \u043F\u0430\u043B\u044C\u0446\u0435\u043C
+    \u043F\u043E \u043F\u0440\u0438\u043B\u0430\u0432\u043A\u0443 \u0440\u044F\u0434\u043E\u043C
+    \u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442\u043E\u043C."
   sprite: {fileID: 0}
 --- !u!114 &3132743342977189827
 MonoBehaviour:
@@ -1220,7 +1688,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5240, y: 40}
+  position: {x: 6904, y: -8}
   ports:
     keys:
     - entry
@@ -1253,12 +1721,7 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u0427\u0442\u043E \u0436, \u0440\u0430\u0437 \u0442\u0435\u043F\u0435\u0440\u044C
-    \u043C\u044B \u0442\u043E\u0447\u043D\u043E \u0441\u043E\u0431\u043B\u044E\u043B\u0438
-    \u0432\u0441\u0435 \u043F\u0440\u0438\u043B\u0438\u0447\u0438\u044F \u0438 \u0444\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438,
-    \u044F \u043F\u043E\u0439\u0434\u0443. \u041C\u043D\u0435 \u0435\u0449\u0435
-    \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0441\u0442\u0438\u0442\u044C
-    \u0410\u0433\u043D\u0435\u0441 \u0438 \u041C\u0430\u0440\u0442\u0443\"."
+  lineRUS: "\u041E, \u044D\u0442\u043E \u0435\u0433\u043E \u0442\u0430\u043A \u0437\u043E\u0432\u0443\u0442."
   sprite: {fileID: 0}
 --- !u!114 &3842346363173287089
 MonoBehaviour:
@@ -1273,7 +1736,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3960, y: 40}
+  position: {x: 5624, y: -8}
   ports:
     keys:
     - entry
@@ -1285,7 +1748,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -8257708914156352101}
+        node: {fileID: 6818798067155240797}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1306,15 +1769,9 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u0410\u0445, \u0434\u0430! \u2014 \u0441\u0442\u0430\u0440\u0438\u043A
-    \u0445\u043B\u043E\u043F\u043D\u0443\u043B \u0441\u0435\u0431\u044F \u043F\u043E
-    \u043B\u0431\u0443. \u2014 \u0422\u0430\u043A \u0437\u0430\u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0441\u044F,
-    \u0447\u0442\u043E \u043F\u043E\u0437\u0430\u0431\u044B\u043B \u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C
-    \u0432\u0430\u0448\u0435 \u0438\u043C\u044F. \u0410 \u0432\u0435\u0434\u044C
-    \u0434\u0430\u0436\u0435 \u0443 \u0413\u0435\u043D\u0440\u0438 \u043E\u043D\u043E
-    \u0435\u0441\u0442\u044C\"."
+  lineRUS: "\u0410\u0445, \u0434\u0430!"
   sprite: {fileID: 0}
---- !u!114 &3879183451749904669
+--- !u!114 &3968572952732180765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1327,45 +1784,43 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -904, y: -72}
+  position: {x: 376, y: -72}
   ports:
     keys:
     - entry
     - exit
     values:
     - _fieldName: entry
-      _node: {fileID: 3879183451749904669}
+      _node: {fileID: 3968572952732180765}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: 2332303273378613211}
+        node: {fileID: -9009468250420577163}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: exit
-      _node: {fileID: 3879183451749904669}
+      _node: {fileID: 3968572952732180765}
       _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: entry
-        node: {fileID: -2861819178202868119}
+        node: {fileID: 6227548571381735496}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   speakerENG: 
-  speakerRUS: "\u041F\u043E\u0441\u0435\u0442\u0438\u0442\u0435\u043B\u044C"
+  speakerRUS: 
   lineENG: 
-  lineRUS: "\"\u0410! \u2014 \u043E\u043D, \u043A\u0430\u0436\u0435\u0442\u0441\u044F,
-    \u043B\u0438\u0448\u044C \u0441\u0435\u0439\u0447\u0430\u0441 \u0437\u0430\u043C\u0435\u0442\u0438\u043B,
-    \u0447\u0442\u043E \u044F \u0432\u043E\u043E\u0431\u0449\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E.
-    \u2014 \u0414\u0435\u043D\u044C \u0434\u043E\u0431\u0440\u044B\u0439! \u0423
-    \u043C\u0435\u043D\u044F \u043A\u043E\u0435-\u0447\u0442\u043E \u0435\u0441\u0442\u044C
-    \u0434\u043B\u044F \u0432\u0430\u0441\"."
+  lineRUS: "\u042F \u043D\u0430\u0434\u0435\u044F\u043B\u0441\u044F, \u0447\u0442\u043E
+    \u043C\u043E\u0435 \u043B\u0438\u0446\u043E \u0432\u044B\u0440\u0430\u0436\u0430\u043B\u043E
+    \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0438\u0435 \u043D\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+    \u044F\u0432\u043D\u043E."
   sprite: {fileID: 0}
 --- !u!114 &4044864051482706316
 MonoBehaviour:
@@ -1380,7 +1835,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1400, y: -88}
+  position: {x: 2744, y: -200}
   ports:
     keys:
     - entry
@@ -1413,14 +1868,15 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u042F \u2014 \u0443\u0447\u0435\u043D\u044B\u0439, \u0437\u0430\u043D\u0438\u043C\u0430\u044E\u0441\u044C
+  lineRUS: "\u042F \u2014 \u0443\u0447\u0435\u043D\u044B\u0439, \u0437\u0430\u043D\u0438\u043C\u0430\u044E\u0441\u044C
     \u0438\u0437\u0443\u0447\u0435\u043D\u0438\u0435\u043C \u044D\u0442\u043E\u0433\u043E
     \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442\u0430. \u0412 \u0437\u0430\u043F\u0438\u0441\u043A\u0435,
     \u0447\u0442\u043E \u044F \u0434\u0435\u0440\u0436\u0443 \u0432 \u0440\u0443\u043A\u0430\u0445,
     \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435
     \u0438\u0437 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0432\u0448\u0438\u0445\u0441\u044F
     \u043F\u043E\u044F\u0441\u043D\u0435\u043D\u0438\u0439 \u043A \u0435\u0433\u043E
-    \u0440\u0430\u0431\u043E\u0442\u0435\"."
+    \u0440\u0430\u0431\u043E\u0442\u0435. \u041F\u043E\u0437\u0432\u043E\u043B\u044C\u0442\u0435,
+    \u044F \u043F\u043E\u043A\u0430\u0436\u0443 \u0432\u0430\u043C."
   sprite: {fileID: 0}
 --- !u!114 &4722208109738587439
 MonoBehaviour:
@@ -1435,7 +1891,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1400, y: 280}
+  position: {x: 2744, y: 136}
   ports:
     keys:
     - entry
@@ -1468,13 +1924,13 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u0447\u0442\u043E \u043A\u043E\u0433\u0434\u0430
+  lineRUS: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u0447\u0442\u043E \u043A\u043E\u0433\u0434\u0430
     \u043C\u044B \u043D\u0430\u043A\u043E\u043D\u0435\u0446 \u0440\u0435\u0448\u0438\u043C
     \u044D\u0442\u0443 \u0437\u0430\u0434\u0430\u0447\u0443, \u043F\u0440\u043E\u0447\u0438\u0435
     \u043C\u043E\u0438 \u043A\u043E\u043B\u043B\u0435\u0433\u0438 \u0442\u043E\u0436\u0435
     \u043E\u0431\u0440\u0430\u0442\u044F\u0442 \u0441\u0432\u043E\u0435 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435
     \u043D\u0430 \u044D\u0442\u043E\u0442 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u0435\u0439\u0448\u0438\u0439
-    \u044D\u043A\u0437\u0435\u043C\u043F\u043B\u044F\u0440!\""
+    \u044D\u043A\u0437\u0435\u043C\u043F\u043B\u044F\u0440!"
   sprite: {fileID: 0}
 --- !u!114 &4804221699483462574
 MonoBehaviour:
@@ -1489,7 +1945,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2168, y: 40}
+  position: {x: 3576, y: -8}
   ports:
     keys:
     - entry
@@ -1522,14 +1978,14 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\"\u041F\u043E\u0447\u0435\u043C\u0443 \u0432\u044B \u043F\u0440\u0438\u0448\u043B\u0438
+  lineRUS: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0432\u044B \u043F\u0440\u0438\u0448\u043B\u0438
     \u043A\u043E \u043C\u043D\u0435? \u042F \u0442\u043E\u043B\u044C\u043A\u043E
     \u0432\u0447\u0435\u0440\u0430 \u043E\u0442\u043A\u0440\u044B\u043B \u043B\u0430\u0432\u043A\u0443.
     \u0420\u0430\u0437\u0432\u0435 \u0443 \u0443\u0447\u0435\u043D\u043E\u0433\u043E
     \u0438\u0437 \u0430\u043A\u0430\u0434\u0435\u043C\u0438\u0438, \u0437\u0430\u043D\u0438\u043C\u0430\u044E\u0449\u0435\u0433\u043E\u0441\u044F
     \u0434\u0440\u0435\u0432\u043D\u0438\u043C\u0438 \u0446\u0435\u043D\u043D\u043E\u0441\u0442\u044F\u043C\u0438,
     \u043D\u0435\u0442 \u0431\u043E\u043B\u0435\u0435 \u0434\u043E\u0432\u0435\u0440\u0435\u043D\u043D\u044B\u0445
-    \u043C\u0430\u0441\u0442\u0435\u0440\u043E\u0432?\""
+    \u043C\u0430\u0441\u0442\u0435\u0440\u043E\u0432?"
   sprite: {fileID: 0}
 --- !u!114 &5358814084212964487
 MonoBehaviour:
@@ -1544,7 +2000,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2680, y: 40}
+  position: {x: 4088, y: -8}
   ports:
     keys:
     - entry
@@ -1585,6 +2041,107 @@ MonoBehaviour:
     \u043C\u0435\u043D\u0435\u0435 \u0441\u0442\u0440\u0430\u043D\u043D\u044B\u043C
     \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442\u043E\u043C."
   sprite: {fileID: 0}
+--- !u!114 &6227548571381735496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6227548571381735496}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 3968572952732180765}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6227548571381735496}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1441331616883730724}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u041F\u043E\u0441\u0435\u0442\u0438\u0442\u0435\u043B\u044C"
+  lineENG: 
+  lineRUS: "\u0414\u0430-\u0434\u0430, \u0434\u043B\u044F \u0432\u0430\u0441."
+  sprite: {fileID: 0}
+--- !u!114 &6294044752236472468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8440, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6294044752236472468}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 1937321888826116483}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6294044752236472468}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4728601810025219927}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  lineENG: 
+  lineRUS: "\u0427\u0442\u043E \u0436, \u0440\u0430\u0437 \u0442\u0435\u043F\u0435\u0440\u044C
+    \u043C\u044B \u0442\u043E\u0447\u043D\u043E \u0441\u043E\u0431\u043B\u044E\u043B\u0438
+    \u0432\u0441\u0435 \u043F\u0440\u0438\u043B\u0438\u0447\u0438\u044F \u0438 \u0444\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438,
+    \u044F \u043F\u043E\u0439\u0434\u0443. \u041C\u043D\u0435 \u0435\u0449\u0435
+    \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0441\u0442\u0438\u0442\u044C
+    \u0410\u0433\u043D\u0435\u0441 \u0438 \u041C\u0430\u0440\u0442\u0443."
+  sprite: {fileID: 0}
 --- !u!114 &6433176122725255825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,7 +2155,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -136, y: -72}
+  position: {x: -392, y: -72}
   ports:
     keys:
     - entry
@@ -1631,12 +2188,111 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: 
   lineENG: 
-  lineRUS: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u043F\u043E\u0434\u043E\u0448\u0435\u043B
-    \u043A \u043F\u0440\u0438\u043B\u0430\u0432\u043A\u0443 \u0438 \u0434\u043E\u0441\u0442\u0430\u043B
-    \u0438\u0437 \u043A\u0430\u0440\u043C\u0430\u043D\u0430 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E
-    \u0441\u0432\u0435\u0440\u0442\u043E\u043A \u0438 \u0441\u043B\u043E\u0436\u0435\u043D\u043D\u044B\u0439
-    \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0440\u0430\u0437
-    \u043A\u0443\u0441\u043E\u0447\u0435\u043A \u0431\u0443\u043C\u0430\u0433\u0438."
+  lineRUS: "\u041E\u043D, \u043A\u0430\u0436\u0435\u0442\u0441\u044F, \u043B\u0438\u0448\u044C
+    \u0441\u0435\u0439\u0447\u0430\u0441 \u0437\u0430\u043C\u0435\u0442\u0438\u043B,
+    \u0447\u0442\u043E \u044F \u0432\u043E\u043E\u0431\u0449\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E."
+  sprite: {fileID: 0}
+--- !u!114 &6499094227725389180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7672, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6499094227725389180}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -9070160040973219558}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6499094227725389180}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8424342656258465008}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: 
+  lineENG: 
+  lineRUS: "\u041C\u043E\u0438 \u0433\u043B\u0430\u0437\u0430 \u043F\u043E\u043B\u0435\u0437\u043B\u0438
+    \u043D\u0430 \u043B\u043E\u0431 \u043E\u0442 \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0438\u044F.
+    \"\u0427\u0442\u043E \u0437\u0430 \u0447\u0443\u0448\u044C \u043E\u043D \u043D\u0435\u0441\u0435\u0442,
+    \u0447\u0435\u0440\u0442 \u0432\u043E\u0437\u044C\u043C\u0438?\" \u041D\u043E,
+    \u043A \u0441\u0447\u0430\u0441\u0442\u044C\u044E, \u044F \u0432\u043E\u0432\u0440\u0435\u043C\u044F
+    \u0441\u043C\u043E\u0433 \u0432\u0437\u044F\u0442\u044C \u0441\u0435\u0431\u044F
+    \u0432 \u0440\u0443\u043A\u0438."
+  sprite: {fileID: 0}
+--- !u!114 &6818798067155240797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5368, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6818798067155240797}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: -8257708914156352101}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 6818798067155240797}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3842346363173287089}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
+  lineENG: 
+  lineRUS: "\u041F\u043E \u0440\u0443\u043A\u0430\u043C!"
   sprite: {fileID: 0}
 --- !u!114 &7906444596794424943
 MonoBehaviour:
@@ -1651,7 +2307,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 888, y: 280}
+  position: {x: 2232, y: 136}
   ports:
     keys:
     - entry
@@ -1684,15 +2340,66 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0425\u044D\u0432\u0430\u0440\u0434"
   lineENG: 
-  lineRUS: "\"...\u0443\u0447\u0435\u043D\u044B\u0439 \u0438\u0437 \u043C\u0435\u0441\u0442\u043D\u043E\u0439
-    \u043C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0430\u043A\u0430\u0434\u0435\u043C\u0438\u0438.
-    \u042F \u0434\u0430\u0432\u043D\u043E \u0438\u0437\u0443\u0447\u0430\u044E \u044D\u0442\u043E\u0442
-    \u0441\u0442\u0430\u0440\u0438\u043D\u043D\u044B\u0439 \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442.
-    \u0423\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u043E \u043D\u0435\u043C
-    \u0441\u0430\u043C\u043E\u043C \u0438 \u043E \u0442\u043E\u043C, \u043A\u0430\u043A
-    \u043E\u043D \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043B\u0441\u044F,
-    \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0441\u044C \u043B\u0438\u0448\u044C
-    \u0432 \u044D\u0442\u043E\u043C \u0442\u0440\u0430\u043A\u0442\u0430\u0442\u0435\"."
+  lineRUS: "\u041A\u0441\u0442\u0430\u0442\u0438, \u0432\u044B \u0432\u0435\u0434\u044C
+    \u0437\u043D\u0430\u043B\u0438, \u0447\u0442\u043E, \u043F\u043E\u043C\u0438\u043C\u043E
+    \u043E\u0431\u0449\u0435\u043F\u0440\u0438\u043D\u044F\u0442\u043E\u0439 \u043F\u0430\u0440\u0430\u0434\u0438\u0433\u043C\u044B
+    \u043E \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0438
+    \u0435\u0433\u043E \u0438\u043C\u0435\u043D\u0438, \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442
+    \u0432\u0435\u0440\u0441\u0438\u044F, \u0447\u0442\u043E \u0435\u0433\u043E \u043F\u0440\u043E\u0437\u0432\u0438\u0449\u0435
+    \u0432\u043E\u0437\u043D\u0438\u043A\u043B\u043E \u0438\u0437-\u0437\u0430 \u043E\u0441\u0442\u0440\u043E\u0439
+    \u0444\u043E\u0440\u043C\u044B \u0434\u0435\u0440\u043C\u0430\u0442\u0438\u0442\u0430,
+    \u043E\u0442\u0447\u0435\u0433\u043E \u0435\u0433\u043E \u0440\u0443\u043A\u0438
+    \u043A\u0430\u0437\u0430\u043B\u0438\u0441\u044C \u043A\u0440\u0430\u0441\u043D\u044B\u043C\u0438?"
+  sprite: {fileID: 0}
+--- !u!114 &8424342656258465008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c1f67cd927d4406a7aa40c9b6bfafd, type: 3}
+  m_Name: Narration Line
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7928, y: -8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 8424342656258465008}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exit
+        node: {fileID: 6499094227725389180}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 8424342656258465008}
+      _typeQualifiedName: Dialogue_System.Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 1937321888826116483}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  speakerENG: 
+  speakerRUS: "\u0419\u043E\u043D"
+  lineENG: 
+  lineRUS: "...\u043B\u0430\u0434\u043D\u043E, \u044D\u0442\u043E \u043D\u0435 \u043C\u043E\u0435
+    \u0434\u0435\u043B\u043E. \u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442
+    \u0419\u043E\u043D."
   sprite: {fileID: 0}
 --- !u!114 &9040746185827927582
 MonoBehaviour:
@@ -1741,13 +2448,13 @@ MonoBehaviour:
   speakerRUS: 
   lineENG: 
   lineRUS: "\u0412 \u043B\u0430\u0432\u043A\u0443 \u0437\u0430\u0448\u0435\u043B
-    \u043F\u043E\u0436\u0438\u043B\u043E\u0439 \u043C\u0443\u0436\u0447\u0438\u043D\u0430,
-    \u043E\u0434\u0435\u0442\u044B\u0439 \u0432\u0435\u0441\u044C\u043C\u0430 \u0441\u043A\u0440\u043E\u043C\u043D\u043E.
-    \u041E\u043D \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E \u0437\u0430\u043A\u0440\u044B\u043B
-    \u0437\u0430 \u0441\u043E\u0431\u043E\u0439 \u0434\u0432\u0435\u0440\u044C, \u0430
-    \u0437\u0430\u0442\u0435\u043C \u043D\u0435\u0442\u043E\u0440\u043E\u043F\u043B\u0438\u0432\u043E
+    \u0432\u0435\u0441\u044C\u043C\u0430 \u0441\u043A\u0440\u043E\u043C\u043D\u043E
+    \u043E\u0434\u0435\u0442\u044B\u0439 \u043F\u043E\u0436\u0438\u043B\u043E\u0439
+    \u043C\u0443\u0436\u0447\u0438\u043D\u0430 . \u041E\u043D \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E
+    \u0437\u0430\u043A\u0440\u044B\u043B \u0437\u0430 \u0441\u043E\u0431\u043E\u0439
+    \u0434\u0432\u0435\u0440\u044C, \u0430 \u0437\u0430\u0442\u0435\u043C \u043D\u0435\u0442\u043E\u0440\u043E\u043F\u043B\u0438\u0432\u043E
     \u043E\u0441\u043C\u043E\u0442\u0440\u0435\u043B\u0441\u044F, \u0431\u0443\u0434\u0442\u043E
-    \u0431\u044B \u0438\u0449\u0430 \u0447\u0442\u043E-\u0442\u043E \u0432\u0437\u0433\u043B\u044F\u0434\u043E\u043C."
+    \u0438\u0449\u0430 \u0447\u0442\u043E-\u0442\u043E \u0432\u0437\u0433\u043B\u044F\u0434\u043E\u043C."
   sprite: {fileID: 0}
 --- !u!114 &9048286773400747631
 MonoBehaviour:
@@ -1762,7 +2469,7 @@ MonoBehaviour:
   m_Name: Narration Line
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4728, y: 40}
+  position: {x: 6392, y: -8}
   ports:
     keys:
     - entry
@@ -1795,9 +2502,7 @@ MonoBehaviour:
   speakerENG: 
   speakerRUS: "\u0419\u043E\u043D"
   lineENG: 
-  lineRUS: "\"...\u043B\u0430\u0434\u043D\u043E, \u044D\u0442\u043E \u043D\u0435
-    \u043C\u043E\u0435 \u0434\u0435\u043B\u043E. \u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442
-    \u0419\u043E\u043D\"."
+  lineRUS: "\u0413\u0435\u043D\u0440\u0438?"
   sprite: {fileID: 0}
 --- !u!114 &9175879133319131059
 MonoBehaviour:
@@ -1812,7 +2517,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6008, y: 40}
+  position: {x: 9464, y: -8}
   ports:
     keys:
     - entry
@@ -1823,7 +2528,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: exit
-        node: {fileID: -9070160040973219558}
+        node: {fileID: 2899649547800787914}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
