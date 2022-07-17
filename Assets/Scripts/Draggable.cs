@@ -5,32 +5,32 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-    private Camera _mainCamera;
-    private bool _isDragging;
-    private Vector3 _grabPoint;
+    protected Camera mainCamera;
+    protected bool isDragging;
+    protected Vector3 grabPoint;
 
 
     public virtual void Awake()
     {
-        _mainCamera = Camera.main;
+        mainCamera = Camera.main;
     }
 
     public virtual void OnMouseDown()
     {
-        _isDragging = true;
-        _grabPoint = _mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        isDragging = true;
+        grabPoint = mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
     }
 
     public virtual void OnMouseUp()
     {
-        _isDragging = false;
+        isDragging = false;
     }
 
     public virtual void OnMouseDrag()
     {
-        if (_isDragging)
+        if (isDragging)
         {
-            Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition) - _grabPoint - transform.position;
+            Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition) - grabPoint - transform.position;
             transform.Translate(mousePosition);
         }
     }

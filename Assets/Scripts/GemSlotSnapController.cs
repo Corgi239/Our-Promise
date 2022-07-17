@@ -7,7 +7,7 @@ using Object = System.Object;
 
 public class GemSlotSnapController : MonoBehaviour
 {
-    private List<GemSlot> _slots;
+    [SerializeField] private List<GemSlot> _slots;
     [SerializeField] private List<Gem> _gems;
     [SerializeField] private float snapRange = 0.8f;
 

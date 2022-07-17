@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -18,7 +19,7 @@ public class GemSlot : MonoBehaviour
       set
       {
          _occupant = value;
-         foreach (OccupantChangeCallback callback in occupantChangeCallbacks) {
+         foreach (OccupantChangeCallback callback in occupantChangeCallbacks ?? Enumerable.Empty<OccupantChangeCallback>()) {
             callback();
          }
       }
